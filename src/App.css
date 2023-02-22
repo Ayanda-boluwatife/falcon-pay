@@ -16,10 +16,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Raleway', sans-serif; 
+  text-transform: capitalize;
 }
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
+}
+img {
+  max-width: 100%;
 }

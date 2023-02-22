@@ -39,6 +39,9 @@
     color: #90EE90;
     border-radius: 14px;
 }
+.h-text {
+    color: var(--green-text)
+}
 @media (max-width: 991.99px) {
     .dropdown-box svg {
         transform: rotate(-90deg);
@@ -67,6 +70,8 @@
         transform: translateX(-200%);
         background: var(--white);
         left: 0;
+        padding-bottom: 3rem;
+        z-index: 100;
     }
     .fixed-nav.open {
         transform: translateX(0);
