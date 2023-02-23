@@ -7,13 +7,23 @@ const Hero = () => {
     <Wrapper>
         <div className='page-center content'>
             <article>
-                <h1>Effortlessly receive<br /> payments from <span className='h-text'>anywhere</span></h1>
+                <h1 className='text-large'>Effortlessly receive<br /> payments from <span className='h-text'>anywhere</span></h1>
                 <p>The perfect solution for freelancers and salaried workers.</p>
                 <Link className='action-btn'>create account</Link>
             </article>
             <div className='hero-box'>
                 <img className='hero-img' src='/images/hero_img.png' alt='hero'/>
             </div>
+        </div>
+        <div className='page-center text-center platforms-container'>
+            <h3>our supported platform include:</h3>
+            <div className='platforms'>
+                <img src='/images/fiverr_logo.png' alt='fiverr' />
+                <img src='/images/upwork_logo.png' alt='upwork' />
+                <img src='/images/paypal_logo.png' alt='paypal' />
+                <img src='/images/stripe_logo.png' alt='stripe' />
+            </div>
+            <h3 className='text-large'>Empower Your Finances with<br className='dsk'/> Our Advanced Platform Features</h3>
         </div>
     </Wrapper>
   )
@@ -44,17 +54,29 @@ article {
     height: 300px;
     transform: translateY(-20px);
 }
-h1 {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    font-weight: 600;
-}
 p {
     font-weight: 500;
     font-size: 1rem;
     line-height: 30px;
     color: rgba(0, 0, 0, 0.7);
     margin-block: 1.5rem 2rem;
+}
+.platforms-container {
+    padding-block: 1rem 5rem;
+}
+.platforms {
+    display: flex;
+    justify-content: center;
+    gap: .5rem 1rem;
+    flex-wrap: wrap;
+    margin-block: 1.5rem 5rem;
+    img {
+        height: 25px;
+        width: 100px;
+    }
+}
+.dsk {
+    display: none;
 }
 @media (min-width: 768px) {
     margin-top: 4rem;
@@ -71,12 +93,15 @@ p {
     .hero-box {
         margin: 0;
     }
+    .platforms-container {
+        padding-top: 5rem;
+    }
+    .dsk {
+        display: block;
+    }
 }
 @media (min-width: 992px) {
     margin-top: 6rem;
-    h1 {
-        font-size: 40px;
-    }
     .content {
         align-items: center;
         column-gap: 5rem;

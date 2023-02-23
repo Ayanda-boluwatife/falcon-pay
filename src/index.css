@@ -3,6 +3,17 @@
     max-width: 1200px;
     margin: auto;
 }
+.bg-black {
+    background-color: var(--black);
+}
+.flex {
+    display: flex;
+}
+.text-large {
+    font-size: 1.5rem;
+    line-height: 2.0rem;
+    font-weight: 600;
+}
 .hamburger {
     width: 40px;
     height: 40px;
@@ -41,6 +52,9 @@
 }
 .h-text {
     color: var(--green-text)
+}
+.text-center {
+    text-align: center;
 }
 @media (max-width: 991.99px) {
     .dropdown-box svg {
@@ -82,6 +96,10 @@
     }
 }
 @media (min-width: 992px) {
+    .text-large {
+        font-size: 40px;
+        line-height: 2.5rem;
+    }
     .hamburger {
         display: none;
     }
