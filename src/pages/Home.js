@@ -1,4 +1,5 @@
 import React from 'react'
+import Advert from '../components/Advert'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 
@@ -7,6 +8,7 @@ const Home = () => {
     <>
         <Header />
         <Hero />
+        <Advert />
     </>
   )
 }
