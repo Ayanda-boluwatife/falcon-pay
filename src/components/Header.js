@@ -45,8 +45,8 @@ const Header = () => {
                         <li><Link>Support</Link></li>
                     </ul>
                     <ul className='auth-nav nav-links'>
-                        <li><Link>Login</Link></li>
-                        <li><Link className='btn action-btn'>Register</Link></li>
+                        <li><Link to={"/signin"}>Login</Link></li>
+                        <li><Link to={"/signup"} className='btn action-btn'>Register</Link></li>
                     </ul>
                 </div>
 

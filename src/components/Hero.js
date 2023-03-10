@@ -9,7 +9,7 @@ const Hero = () => {
             <article>
                 <h1 className='text-large'>Effortlessly receive<br /> payments from <span className='h-text'>anywhere</span></h1>
                 <p>The perfect solution for freelancers and salaried workers.</p>
-                <Link className='action-btn'>create account</Link>
+                <Link to={"/signup"} className='action-btn'>create account</Link>
             </article>
             <div className='hero-box'>
                 <img className='hero-img' src='/images/hero_img.png' alt='hero'/>
