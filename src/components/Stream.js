@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 function Stream() {
   return (
      
@@ -7,7 +8,7 @@ function Stream() {
      <div className="one">
       <h2>Streamline Your Finance With Us</h2>
       <p>Our platform provides a secure, convenient and easy to use environment for managing financial transactions.</p>
-     <button>Create An Account</button>
+     <Link to={"/signup"}><button>Create An Account</button></Link>
 
      </div>
     </Wrapper>
@@ -34,6 +35,7 @@ const Wrapper = styled.article`
  margin-top: 30px;
  border-radius: 10px;
  font-size: 15px;
+ cursor: pointer;
 }
 button:hover{
   background-color: gray;

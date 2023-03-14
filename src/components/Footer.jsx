@@ -10,7 +10,9 @@ return(
             <div className="all-first">
                 <div className="first">
                     <ul>
-                        <li><h3><button>Logo</button></h3></li>
+                        <li>
+                            <img src="/bolu-images/FalconPay.png" alt="" />
+                        </li>
                         <p>Streamline your financials - The ultimate platform for freelancers and salaried workers. Effortlessly manage your international payments. </p>
                     </ul>
                 </div>
@@ -49,7 +51,7 @@ return(
         
 
         <div className="border">
-        <div className="bord"><h3>2023 copyright by matmosPay. All right reserved.</h3></div>
+        <div className="bord"><h3>2023 copyright by FalconPay | All rights reserved.</h3></div>
         <div className="bords">
         <img src={process.env.PUBLIC_URL + '/Mubarak img/instagram.png'} alt="main"  />
         <img src={process.env.PUBLIC_URL + '/Mubarak img/twitter.png'} alt="main"  />

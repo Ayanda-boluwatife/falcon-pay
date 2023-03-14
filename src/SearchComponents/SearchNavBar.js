@@ -1,51 +1,48 @@
 import {React, useState} from 'react'
 import { MdOutlineNightlight, MdOutlineNotificationsNone } from 'react-icons/md';
-import styled from 'styled-components';
-import SideNavBar from '../Asidebar/SideNavBar';
 import { BiSun } from 'react-icons/bi';
+import styled from 'styled-components';
 
-const DashboardNav = (props) => {
+const SearchNavBar = (props) => {
     const [isLightMode, setIsLightMode] = useState(true);
-
-  const handleToggle = () => {
+    
+    const handleToggle = () => {
     setIsLightMode(!isLightMode);
-  };
+    };
 
-  const sectionClassName = `toggle-bg-color ${
+    const sectionClassName = `toggle-bg-color ${
     isLightMode ? 'light-mode' : 'dark-mode'
-  }`;
+    }`;
   return (
     <Wrapper>
-        <div className='bank-details'>
-                <SideNavBar />
-            <div className={sectionClassName} >
-                <div className='flex-one'>
-                    <div>
-                        <h2>{props.header}</h2>
-                    </div>
-                    <div>
-                        <input type={"search"} placeholder={"search here..........."} />
-                    </div>
-                    <div className='nav-bar'>
-                        {
-                            isLightMode? <span onClick={handleToggle}><MdOutlineNightlight /></span> : <span onClick={handleToggle}><BiSun /></span>
-                        }
-                        <span><MdOutlineNotificationsNone /></span>
-                        <div className='profile'></div>
-                    </div>
-                </div>
-            </div>
+      <div className={sectionClassName}>
+        <h1>{props.heading}</h1>
+        <form>
+            <input type={props.inputType} className={props.inputClass} placeholder="Search here........." />
+        </form>
+        <div className='profile-area'>
+        {
+            isLightMode? <span onClick={handleToggle}><MdOutlineNightlight /></span> : <span onClick={handleToggle}><BiSun /></span>
+        }
+        <span><MdOutlineNotificationsNone /></span>
+        <div className='profile'></div>
         </div>
+    </div>
     </Wrapper>
   )
 }
 const Wrapper = styled.section`
-width: 100%;
+display:flex;
 .bank-details{
     display: flex;
     width: 100%;
     height: 100vh;
     flex-direction: row;
+}
+.profile-area{
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .flex-one{
     display: flex;
@@ -54,7 +51,11 @@ width: 100%;
     width: 100%;
 }
 .toggle-bg-color{
-    width: 85%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
 }
 .profile{
     background-color: gray;
@@ -78,7 +79,7 @@ width: 100%;
     outline-color: #90EE90;
     background-color:#F7F7F7;
     border: none;
-    box-shadow: 0 4px 4px gray;
+    box-shadow: 1px 0px 11px rgba(0, 0, 0, 0.15);
 }
 .toggle-bg-color.light-mode {
   background-color: #fff;
@@ -91,6 +92,5 @@ width: 100%;
   color: white;
   cursor: pointer;
 }
-
 `
-export default DashboardNav;
+export default SearchNavBar;

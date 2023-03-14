@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState, useEffect} from 'react'
 import Advert from '../components/Advert'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -8,10 +8,19 @@ import Stream from '../components/Stream'
 import Help from '../components/Help'
 import Integration from '../components/Integration'
 import Footer from '../components/Footer'
+import Loading from './Loading'
 const Home = () => {
+
+  const [isLoading, setLoading] = useState(true)
+
+  useEffect(()=>{
+    setLoading(false)
+  }, [])
   return (
     <>
-        <Header />
+    {isLoading? (<Loading/>) : (
+       <div>
+         <Header />
         <Hero />
         <Advert />
         <Integration />
@@ -20,6 +29,9 @@ const Home = () => {
         <Stream />
         <Help />
         <Footer />
+       </div>
+
+        )}
     </>
   )
 }

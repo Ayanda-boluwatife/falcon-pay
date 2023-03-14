@@ -11,47 +11,49 @@ import {BsApple, BsFacebook} from 'react-icons/bs'
 
 const Signup = () => {
 // ================ VALIDATION GOES HERE ========================
-    // const userRef = useRef();
-    // const errRef = useRef();
+const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState('');
+  const [errors, setErrors] = useState([]);
 
-    // const [user, setUser] = useState("");
-    // const [validName, setValidName] = useState(false);
-    // const [userFocus, setUserFocus] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (validationErrors.length === 0) {
+      console.log('Valid form submitted');
+      // do something with the form data
+    } else {
+      console.log('Invalid form submitted');
+      setErrors(validationErrors);
+    }
+  };
 
-    // const [pwd, setPwd] = useState("");
-    // const [validPwd, setValidPwd] = useState(false);
-    // const [pwdFocus, setPwdFocus] = useState(false);
+  const validateForm = () => {
+    const errors = [];
+    if (!email) {
+      errors.push('Email is required');
+    } else if (!isValidEmail(email)) {
+      errors.push('Email is invalid');
+    }
+    if (!password) {
+      errors.push('Password is required');
+    } else if (password.length < 8) {
+      errors.push('Password must be at least 8 characters long');
+    }
+    if (password !== passwordConfirmation) {
+      errors.push('Passwords do not match');
+    }
+    return errors;
+  };
 
-    // const [errMessage, setErrMessage] = useState("");
-    // const [success, setSuccess] = useState(false);
-
-    // useEffect(()=>{
-    //     userRef.current.focus();
-    // },[])
-
-    // useEffect(()=>{
-    //     const result = USER_REGEX.test(user);
-    //     console.log(result);
-    //     console.log(user);
-    //     setValidName(result);
-    // },[user])
-
-    // useEffect(()=>{
-    //     const result = PWD_REGEX.test(pwd);
-    //     console.log(result);
-    //     console.log(pwd);
-    //     setValidPwd(result);
-    // },[pwd])
-
-    // useEffect(()=>{
-    //     setErrMessage("");
-    // },[user, pwd])
-
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 // ============== VALIDATION ENDS HERE ===========================
 
 // ============= TOGGLE PASSWORD GOES HERE =========================
 
-    const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
 
     const handlePasswordChange = (event) => {
@@ -75,29 +77,34 @@ const Signup = () => {
                 </Link>
             </div>
             <h1>Sign Up</h1>
-            <div className='register-mail-input'>
-                <input
-                 type='text'
-                 placeholder='Full Name'
-                //  ref={userRef}
-                //  autoComplete="off"
-                //  onChange={(e)=> setUser(e.target.value)}
-                //  required
-                //  aria-invalid={validName ? 'false' : 'true'}
-                //  aria-describedby= 'uidnote'
-                //  onFocus={() => setUserFocus (true)}
-                //  onBlur={() => setUserFocus (false)}
-                />
-            </div>
-            <div className='register-mail-input'>
-                <input type='text' placeholder='Enter your mail' />
-            </div>
-            <div className='register-password-input'>
-                <input type={showPassword ? "text" : "password"} onChange={handlePasswordChange} value={password} placeholder='Your Password' />
-                {
-                    showPassword? <span onClick={toggleShowPassword}><BiHide /></span> : <span onClick={toggleShowPassword}><AiOutlineEye /></span>
-                }
-            </div>
+           <form onSubmit={handleSubmit}>
+                <div className='register-mail-input'>
+                    <input type='text' placeholder='Full Name' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                </div>
+                <div className='register-mail-input'>
+                    <input type='text' placeholder='Enter your mail' />
+                </div>
+                <div className='register-password-input'>
+                    <input type={showPassword ? "text" : "password"} onShow={handlePasswordChange} value={password} placeholder='Your Password' onChange={(e) => setPassword(e.target.value)} />
+                    {
+                        showPassword? <span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
+                    }
+                </div>
+                <div className='register-password-input'>
+                    <input type={showPassword ? "text" : "password"} onshow={handlePasswordChange}  placeholder='Your Password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
+                        {
+                            showPassword? <span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
+                        }
+                        {errors.length > 0 && (
+                            <ul className="error-list">
+                            {errors.map((error, index) => (
+                                <li key={index}>{error}</li>
+                            ))}
+                            </ul>
+                        )}
+                </div>
+                
+           </form>
             <div className='terms-condition'>
                 <p>By Signing Up Means You Have Agreed With Our <Link>Terms</Link> And <Link>Conditions</Link></p>
             </div>
@@ -106,15 +113,21 @@ const Signup = () => {
             </div>
             <p className='center'>Sign up with</p>
             <div className='register-with'>
-                <div className='register-with-apple'>
-                    <BsApple />
-                </div>
-                <div className='register-with-facebook'>
+                <a href='.'>
+                    <div className='register-with-apple'>
+                        <BsApple />
+                    </div>
+                </a>
+                <a href='.'>
+                    <div className='register-with-facebook'>
                     <BsFacebook />
                 </div>
-                <div className='register-with-google'>
-                    <AiOutlineGoogle />
-                </div>
+                </a>
+                <a href='.'>
+                    <div className='register-with-google'>
+                        <AiOutlineGoogle />
+                    </div>
+                </a>
             </div>
             <div className='link-to-signin'>
                 <p>Already Have An Account ? <Link to={"/signin"}>Sign In</Link></p>
@@ -178,6 +191,9 @@ height: 100vh;
 }
 .link-to-signin a, .terms-condition a{
     color: #90EE90;
+}
+a{
+    color: black;
 }
 .link-to-signin{
     font-weight: 800;

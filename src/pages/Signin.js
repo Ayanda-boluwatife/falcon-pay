@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { BiHide} from "react-icons/bi";
@@ -7,6 +7,7 @@ import {AiOutlineEye} from 'react-icons/ai';
 import {BsApple} from 'react-icons/bs';
 import {BsFacebook} from 'react-icons/bs';
 import {AiOutlineGoogle} from 'react-icons/ai';
+import Loading from './Loading';
 
 const Signin = () => {
     const [password, setPassword] = useState("");
@@ -19,57 +20,77 @@ const Signin = () => {
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
     };
+
+    const [isLoading, setLoading] = useState(true)
+
+    useEffect(()=>{
+      setLoading(false)
+    }, [])
   return (
     <Wrapper>
-        <div className='login-image'>
-            <img src='/bolu-images/login-image.png' alt='Login in' />
-        </div>
+        {
+            isLoading? (<Loading/>) : (
+                
+            <div className='container'>
+                                <div className='login-image'>
+                    <img src='/bolu-images/login-image.png' alt='Login in' />
+                </div>
 
-        <div className='login-user-details'>
-            <div>
-                <Link to={"/"}>
-                    <img src='/bolu-images/falcon_pay_logo.png' alt='' />
-                </Link>
-            </div>
-            <h1>Log in</h1>
-            <div className='mail-input form-field'>
-                <input type='text' placeholder='Enter your mail' />
-            </div>
-            <div className='password-input form-field'>
-                <input type={showPassword ? "text" : "password"} onChange={handlePasswordChange} value={password} placeholder='Your Password' />
-                {
-                    showPassword? <span onClick={toggleShowPassword}><BiHide /></span> : <span onClick={toggleShowPassword}><AiOutlineEye /></span>
-                }
-            </div>
-            <div className='login-btn'>
-                <button>Continue</button>
-            </div>
-            <p>Log in with</p>
-            <div className='login-with'>
-                <div className='login-with-apple'>
-                    <BsApple />
+                <div className='login-user-details'>
+                    <div>
+                        <Link to={"/"}>
+                            <img src='/bolu-images/falcon_pay_logo.png' alt='' />
+                        </Link>
+                    </div>
+                    <h1>Log in</h1>
+                    <div className='mail-input form-field'>
+                        <input type='text' placeholder='Enter your mail' />
+                    </div>
+                    <div className='password-input form-field'>
+                        <input type={showPassword ? "text" : "password"} onChange={handlePasswordChange} value={password} placeholder='Your Password' />
+                        {
+                            showPassword?<span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
+                        }
+                    </div>
+                    <div className='login-btn'>
+                        <Link to={"/dashboard"}><button>Continue</button></Link>
+                    </div>
+                    <p>Log in with</p>
+                    <div className='login-with'>
+                        <a href='.'>
+                        <div className='login-with-apple'>
+                            <BsApple />
+                        </div>
+                        </a>
+                        <a href='.'>
+                        <div className='login-with-facebook'>
+                            <BsFacebook />
+                        </div>
+                        </a>
+                        <a href='.'>
+                        <div className='login-with-google'>
+                            <AiOutlineGoogle />
+                        </div>
+                        </a>
+                    </div>
+                    <div className='link-to-signup'>
+                        <p>Don't have an account? <Link to={"/signup"}>Sign Up</Link></p>
+                    </div>
                 </div>
-                <div className='login-with-facebook'>
-                    <BsFacebook />
-                </div>
-                <div className='login-with-google'>
-                    <AiOutlineGoogle />
-                </div>
             </div>
-            <div className='link-to-signup'>
-                <p>Don't have an account? <Link to={"/signup"}>Sign Up</Link></p>
-            </div>
-        </div>
+            )}
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-padding:30px;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding:30px;
+}
 .form-field {
     width: 100%;
 }
@@ -90,7 +111,7 @@ input{
 }
 .mail-input input{
     height: 6vh;
-    width:400px ;
+    /* width:400px ; */
     padding: 20px;
     border: none;
     background-color: #F7F7F7;
@@ -130,11 +151,17 @@ input{
     border-radius: 20px;
     cursor: pointer;
 }
+.password-input svg{
+    cursor: pointer;
+}
 .link-to-signup a{
     color: #90EE90;
 }
 .link-to-signup p{
     font-weight: 800;
+}
+a{
+    color: black;
 }
 @media screen and (max-width:900px){
     .login-image{

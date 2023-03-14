@@ -24,47 +24,41 @@ const SideNavBar = () => {
                 </Link>
             </div>
 
-            <div>
-                <h4 className={`h4 ${showSidebar ? 'none' : ''}`}>Account</h4>
-            </div>
-
-            <div className='main-dashboard'>
-                <ul>
+            <div className='main-dashboard link-group'>
+                <h4 className={`h4 ${showSidebar ? 'hide' : ''}`}>Account</h4>
+                <ul className='link-items'>
                     <li>
-                        <Link><span><MdOutlineDashboard /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>  Dashboard</h3></Link>
+                        <Link to={"/dashboard"}><span><MdOutlineDashboard /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>  Dashboard</span></Link>
                     </li>
                     <li>
-                        <Link><span><RiBankFill /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>Bank Details</h3></Link>
+                        <Link to={"/bankdetails"}><span><RiBankFill /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Bank Details</span></Link>
                     </li>
                     <li>
-                        <Link> <span><RiWallet3Fill /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>Withdrawal</h3></Link>
+                        <Link to={"/withdraw"}> <span><RiWallet3Fill /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Withdrawal</span></Link>
                     </li>
                     <li>
-                        <Link><span><MdOutlinePayments /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}> Payment History</h3></Link>
+                        <Link><span><MdOutlinePayments /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}> Payment History</span></Link>
                     </li>
                     <li>
-                        <Link><span><RiAccountBoxFill /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}> Profile</h3></Link>
+                        <Link><span><RiAccountBoxFill /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}> Profile</span></Link>
                     </li>
                 </ul>
             </div>
 
-            <div>
-                <h4 className={`h4 ${showSidebar ? 'none' : ''}`}>Settings</h4>
-            </div>
-
-            <div className='main-setting'>
-                <ul>
+            <div className='main-setting link-group'>
+                <h4 className={`h4 ${showSidebar ? 'hide' : ''}`}>Settings</h4>
+                <ul className='link-items'>
                     <li>
-                        <Link><span><MdSupervisorAccount /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>Referral</h3></Link>
+                        <Link><span><MdSupervisorAccount /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Referral</span></Link>
                     </li>
                     <li>
-                        <Link><span><IoIosPeople /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>Community</h3></Link>
+                        <Link><span><IoIosPeople /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Community</span></Link>
                     </li>
                     <li>
-                        <Link><span><FaRegQuestionCircle /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</h3></Link>
+                        <Link><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</span></Link>
                     </li>
                     <li>
-                        <Link><span><FiLogOut /></span><h3 className={`h4 ${showSidebar ? 'none' : ''}`}>Log Out</h3></Link>
+                        <Link to={"/signin"}><span><FiLogOut /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Log Out</span></Link>
                     </li>
                 </ul>
             </div>
@@ -74,18 +68,20 @@ const SideNavBar = () => {
 }
 const Wrapper = styled.section`
 .sidebar {
-  position: fixed;
-  height: 100%;
+  padding: 16px ;
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  left: 0;
   transition: ease-in-out .1s;
   background-color: black;
-  width: 15%; 
   display: flex; 
+  overflow-y: hidden;
   flex-direction: column; 
 }
 
 .sidebar.open {
-  width: 5%;
-  padding: 0 10px;
+  width:57px;
   transition: ease-in-out .1s;
 }
 
@@ -98,21 +94,26 @@ const Wrapper = styled.section`
 .nav{
     margin-top: 10px;
 }
-span{
-    font-size: 30px;
+svg{
+    font-size: 25px;
     color: #90EE90;
 }
 
 .none{
     display: none ;
 }
+.hide{
+    visibility: hidden;
+}
 .h4{
     color: white;
-    margin-top: 10px;
-    text-align: center;
 }
-.main-dashboard ul li a, .main-dashboard ul li h3{
+.main-dashboard ul li a, .main-dashboard ul li span{
     color: #90EE90;
+}
+.link-group > h4 {
+    padding-left: 40px;
+    padding-top: 30px;
 }
 .main-dashboard ul li a{
     display: flex;
@@ -126,17 +127,19 @@ span{
     gap: 10px;
     padding:10px 5px;
 }
-.main-setting ul li h3{
+.main-setting ul li span{
     color: #90EE90;
 }
 @media screen and (max-width:900px) {
     .sidebar{
-        width:60%;
+        width:30%;
         height: 100vh;
-        gap: 40px;
     }
     .sidebar.open{
-        width:15%;
+        width:10%;
+    }
+    .link-group > h4{
+        padding-top: 20px;
     }
 }
 `

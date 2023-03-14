@@ -15,7 +15,6 @@ function Withdrawal() {
       <p>withdrawal process, available on our finance platform.</p>
     </div>
     <div className="two">
-      {/* <img src="/images/bank.png" alt="" /> */}
     <Person  age="local bank account" occupation="We allow user to withdraw their earnings to their local bank account, providing them with a convenient and secure way to access their funds." image="/Mubarak img/bank.png" />
     <Person  age="Domain Account" occupation="You can withdraw your earnings to any account of choice, such as bank, e-wallet, or other supported payment methods like PayPal, Stripe, and Square."image="/Mubarak img/account.png" />
     <Person name="" age="Sell To Us" occupation="providing user with a convenient and secure way to convert their earnings into cash quickly or other supported payment methods. " image="/Mubarak img/sell.png"/>
