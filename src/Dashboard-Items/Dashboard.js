@@ -7,7 +7,7 @@ import SideNavBar from '../Asidebar/SideNavBar'
 const Dashboard = () => {
   return (
     <Wrapper>
-        <div>
+        <div className="side">
             <SideNavBar />
         </div>
         <div className='main-main'>
@@ -63,31 +63,31 @@ const Dashboard = () => {
             <tr>
                 <td><BiServer />Transaction to Jays</td>
                 <td>$3000</td>
-                <td className='sent'>sent</td>
+                <td><span className='sent'>sent</span></td>
                 <td>12-6-2022</td>
             </tr>
             <tr>
                 <td><BiServer />From Fiverr Account</td>
                 <td>$5000</td>
-                <td className='recieved'>Recieved</td>
+                <td><span className='recieved'>Recieved</span></td>
                 <td>12-6-2022</td>
             </tr>
             <tr>
                 <td><BiServer />Local Bank Transfer</td>
                 <td>$3000</td>
-                <td className='sent'>sent</td>
+                <td><span className='sent'>sent</span></td>
                 <td>12-6-2022</td>
             </tr>
             <tr>
                 <td><BiServer />Transaction to Jays</td>
                 <td>$3000</td>
-                <td className='processing'>processing</td>
+                <td><span className='processing'>processing</span></td>
                 <td>12-6-2022</td>
             </tr>
             <tr>
                 <td><BiServer />Transaction to Jays</td>
                 <td>$3000</td>
-                <td className='sent'>sent</td>
+                <td><span className='sent'>sent</span></td>
                 <td>12-6-2022</td>
             </tr>
             </table>
@@ -103,11 +103,11 @@ background-color: white;
 display: flex;
 
 .main-main{
-    width: 80%;
+    width: 100%;
     /* height: 100vh; */
 }
 table{
-    width: 90%;
+    width: 100%;
     background-color: #F7F7F7;
 }
 tr{
@@ -249,6 +249,9 @@ th{
     .bill-payment{
         width: 100%;
         height: 15vh;
+    }
+    .side{
+        display: none;
     }
 }
 `

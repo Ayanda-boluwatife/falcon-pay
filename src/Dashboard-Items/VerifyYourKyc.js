@@ -6,6 +6,7 @@ import { TbSteeringWheel } from 'react-icons/tb'
 import styled from 'styled-components';
 import SideNavBar from '../Asidebar/SideNavBar';
 import SearchNavBar from '../SearchComponents/SearchNavBar';
+import { Link } from 'react-router-dom';
 
 const VerifyYourKyc = () => {
   return (
@@ -31,10 +32,12 @@ const VerifyYourKyc = () => {
                 </div>
                 <div className='hello'>
                     <div className='us-account'>
-                        <div className='group-38'>
-                            <IoMdCard/>
-                            <h1>government ID Card</h1>
-                        </div>
+                        <Link to={'/government-id'}>
+                            <div className='group-38'>
+                                <IoMdCard/>
+                                <h1>government ID Card</h1>
+                            </div>
+                        </Link>
                     </div>
                     <div className='us-account'>
                         <div className='group-38'>
@@ -60,6 +63,9 @@ width: 100%;
 
 .inner-bank{
     width: 100%;
+}
+a{
+    color: black;
 }
 .us-account{
     display: flex;
