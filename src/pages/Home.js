@@ -14,8 +14,9 @@ const Home = () => {
   const [isLoading, setLoading] = useState(true)
 
   useEffect(()=>{
-      setTimeOut(()=>{
-      }, 4000)
+      setTimeout(() => {
+        setLoading(false)
+      }, 4000);
   }, [])
   return (
     <>

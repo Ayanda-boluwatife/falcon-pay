@@ -9,6 +9,9 @@ import Withdraw from './Dashboard-Items/Withdraw';
 import VerifyYourKyc from './Dashboard-Items/VerifyYourKyc';
 import SideNavBar from './Asidebar/SideNavBar';
 import GovernmentIdentity from './Dashboard-Items/GovernmentIdentity';
+import Profile from './Dashboard-Items/Profile';
+import Refferal from './Dashboard-Items/Refferal';
+import Community from './Dashboard-Items/Community';
 
 function App() {
   return (
@@ -22,7 +25,10 @@ function App() {
       <Route path='/bankdetails' element={<BankDetail />} />
       <Route path='/withdraw' element={<Withdraw />} />
       <Route path='/verify_your_kyc' element={<VerifyYourKyc />} />
-      <Route path='/government-id' element={<GovernmentIdentity/>}/>
+      <Route path='/government-id' element={<GovernmentIdentity/>} />
+      <Route path='/profile' element={<Profile />} />
+      <Route path='/refferal' element={<Refferal />} />
+      <Route path='/community' element={<Community />} />
      </Routes>
    </BrowserRouter>
   );

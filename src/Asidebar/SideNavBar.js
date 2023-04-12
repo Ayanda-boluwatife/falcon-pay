@@ -37,10 +37,10 @@ const SideNavBar = () => {
                         <Link to={"/withdraw"}> <span><RiWallet3Fill /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Withdrawal</span></Link>
                     </li>
                     <li>
-                        <Link><span><MdOutlinePayments /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}> Payment History</span></Link>
+                        <Link to={"/payment-history"}><span><MdOutlinePayments /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}> Payment History</span></Link>
                     </li>
                     <li>
-                        <Link><span><RiAccountBoxFill /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}> Profile</span></Link>
+                        <Link to={'/profile'}><span><RiAccountBoxFill /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}> Profile</span></Link>
                     </li>
                 </ul>
             </div>
@@ -49,10 +49,10 @@ const SideNavBar = () => {
                 <h4 className={`h4 ${showSidebar ? 'hide' : ''}`}>Settings</h4>
                 <ul className='link-items'>
                     <li>
-                        <Link><span><MdSupervisorAccount /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Referral</span></Link>
+                        <Link to={'/refferal'}><span><MdSupervisorAccount /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Referral</span></Link>
                     </li>
                     <li>
-                        <Link><span><IoIosPeople /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Community</span></Link>
+                        <Link to={'/community'}><span><IoIosPeople /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Community</span></Link>
                     </li>
                     <li>
                         <Link><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</span></Link>
