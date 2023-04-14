@@ -55,13 +55,8 @@ const Signin = () => {
                     <div className='login-btn'>
                         <Link to={"/dashboard"}><button>Continue</button></Link>
                     </div>
-                    <p>Log in with</p>
+                    <p>Or Log in with</p>
                     <div className='login-with'>
-                        <a href='.'>
-                        <div className='login-with-apple'>
-                            <BsApple />
-                        </div>
-                        </a>
                         <a href='.'>
                         <div className='login-with-facebook'>
                             <BsFacebook />

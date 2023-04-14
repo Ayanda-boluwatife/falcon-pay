@@ -84,17 +84,14 @@ const [email, setEmail] = useState('');
                 <div className='register-mail-input'>
                     <input type='text' placeholder='Enter your mail' />
                 </div>
-                <div className='register-password-input'>
+                <div className='register-password-input grp-show'>
                     <input type={showPassword ? "text" : "password"} onShow={handlePasswordChange} value={password} placeholder='Your Password' onChange={(e) => setPassword(e.target.value)} />
                     {
                         showPassword? <span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
                     }
                 </div>
                 <div className='register-password-input'>
-                    <input type={showPassword ? "text" : "password"} onshow={handlePasswordChange}  placeholder='Your Password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
-                        {
-                            showPassword? <span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
-                        }
+                    <input type={showPassword ? "text" : "password"} onshow={handlePasswordChange}  placeholder='Confirm Password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/>
                         {errors.length > 0 && (
                             <ul className="error-list">
                             {errors.map((error, index) => (
@@ -111,13 +108,8 @@ const [email, setEmail] = useState('');
             <div className='register-btn'>
                 <button>Continue</button>
             </div>
-            <p className='center'>Sign up with</p>
+            <p className='center'>Or Sign up with</p>
             <div className='register-with'>
-                <a href='.'>
-                    <div className='register-with-apple'>
-                        <BsApple />
-                    </div>
-                </a>
                 <a href='.'>
                     <div className='register-with-facebook'>
                     <BsFacebook />
@@ -154,20 +146,27 @@ height: 100vh;
 .register-user-details h1{
     text-align: center;
 }
+.grp-show{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    gap:10px;
+}
 .register-mail-input input, .register-password-input input{
     height: 6vh;
     width: 100%;
     padding: 20px;
+    margin-top:10px;
     border: none;
     background-color: #F7F7F7;
     outline-color: #90EE90;
     border-radius: 10px;
 }
 .register-password-input svg{
-    position: absolute;
-    right: 18%;
-    top: 47.5%;
     cursor: pointer;
+    position:absolute;
+    z-index:100;
 }
 .register-btn button{
     height: 6vh;
