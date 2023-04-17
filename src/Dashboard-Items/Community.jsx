@@ -19,12 +19,12 @@ const Community = () => {
 
             <div className="community">
                 <div className="join">
-                    <div>
+                    <div className="comm">
                         <h1>Join Our Community</h1>
                         <p>Make a differences by joining the community</p>
-                        <div>
+                        <div className='media'>
                             <h3>Follow our Social Media</h3>
-                            <div>
+                            <div className='social'>
                                 <img src="/Mubarak img/twitter.png" alt="" />
                                 <img src="/Mubarak img/instagram.png" alt="" />
                                 <img src="/Mubarak img/linkedin.png" alt="" />
@@ -50,12 +50,11 @@ const Community = () => {
                 </div>
 
                 <div className="post">
-                    <div>
-                        <h1><a href=".">How Can I Withdraw With My Bank Account</a></h1>
-                        <div>
-
+                        <h2><a href=".">How Can I Withdraw With My Bank Account</a></h2>
+                        <div className='profile-sub'>
+                            <div className="profile"></div>
+                            <h3>Jays Alimi</h3>
                         </div>
-                    </div>
                 </div>
 
             </div>
@@ -101,6 +100,42 @@ const Wrapper = styled.section`
         justify-content: space-between;
         padding-right: 110px;
         padding-top: 20px;
+    }
+    .profile{
+        background-color: gray;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .profile-sub{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .post{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        width: 90%;
+        background-color: #F7F7F7;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+    .comm{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .media{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .social{
+        display: flex;
+        gap: 10px;
     }
 `
 export default Community

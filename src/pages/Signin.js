@@ -32,7 +32,7 @@ const Signin = () => {
             isLoading? (<Loading/>) : (
                 
             <div className='container'>
-                                <div className='login-image'>
+                <div className='login-image'>
                     <img src='/bolu-images/login-image.png' alt='Login in' />
                 </div>
 
@@ -55,13 +55,8 @@ const Signin = () => {
                     <div className='login-btn'>
                         <Link to={"/dashboard"}><button>Continue</button></Link>
                     </div>
-                    <p>Log in with</p>
+                    <p>Or Log in with</p>
                     <div className='login-with'>
-                        <a href='.'>
-                        <div className='login-with-apple'>
-                            <BsApple />
-                        </div>
-                        </a>
                         <a href='.'>
                         <div className='login-with-facebook'>
                             <BsFacebook />
@@ -70,6 +65,11 @@ const Signin = () => {
                         <a href='.'>
                         <div className='login-with-google'>
                             <AiOutlineGoogle />
+                        </div>
+                        </a>
+                        <a href='.'>
+                        <div className='login-with-apple'>
+                            <BsApple />
                         </div>
                         </a>
                     </div>
@@ -111,7 +111,6 @@ input{
 }
 .mail-input input{
     height: 6vh;
-    /* width:400px ; */
     padding: 20px;
     border: none;
     background-color: #F7F7F7;

@@ -48,7 +48,7 @@ const VerifyYourKyc = () => {
                     <div className='us-account'>
                         <div className='group-38'>
                             <TbSteeringWheel />
-                            <h1>international passport</h1>
+                            <h1>Driver Licensce</h1>
                         </div>
                     </div>
                 </div>

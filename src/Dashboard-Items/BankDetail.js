@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const BankDetail = () => {
   return (
     <Wrapper>
-        <div>
+        <div className='side'>
             <SideNavBar />
         </div>
         <div className='bank-detail'>
@@ -89,5 +89,6 @@ display: flex;
 a{
     color: black;
 }
+
 `
 export default BankDetail;
