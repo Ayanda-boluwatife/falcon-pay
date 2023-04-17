@@ -7,7 +7,7 @@ import { BiCopy } from 'react-icons/bi'
 const Refferal = () => {
   return (
     <Wrapper>
-        <div>
+        <div className='side'>
             <SideNavBar />
         </div>
         <div className='second'>
@@ -112,6 +112,11 @@ const Wrapper = styled.section`
         background-color: #90EE90;
         border: none;
         border-radius: 10px;
+    }
+    @media screen and (max-width: 950px) {
+        .side{
+            display: none;
+        }
     }
 `
 export default Refferal

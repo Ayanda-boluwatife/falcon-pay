@@ -120,6 +120,11 @@ const [email, setEmail] = useState('');
                         <AiOutlineGoogle />
                     </div>
                 </a>
+                <a href='.'>
+                    <div className='register-with-apple'>
+                        <BsApple />
+                    </div>
+                </a>
             </div>
             <div className='link-to-signin'>
                 <p>Already Have An Account ? <Link to={"/signin"}>Sign In</Link></p>
