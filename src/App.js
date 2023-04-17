@@ -12,6 +12,12 @@ import GovernmentIdentity from './Dashboard-Items/GovernmentIdentity';
 import Profile from './Dashboard-Items/Profile';
 import Refferal from './Dashboard-Items/Refferal';
 import Community from './Dashboard-Items/Community';
+import GovtInner from './Dashboard-Items/GovtInner';
+import Govtouter from './Dashboard-Items/Govtouter';
+import Review from './Dashboard-Items/Review';
+import UnderReview from './Dashboard-Items/UnderReview';
+import Localbank from './Dashboard-Items/Localbank';
+import Domain from './Dashboard-Items/Domain';
 
 function App() {
   return (
@@ -29,7 +35,13 @@ function App() {
       <Route path='/profile' element={<Profile />} />
       <Route path='/refferal' element={<Refferal />} />
       <Route path='/community' element={<Community />} />
-     </Routes>
+      <Route path='/govtinner' element={<GovtInner />} />
+      <Route path='/govtouter' element={<Govtouter />}/>
+      <Route path='/review' element={<Review />}/>
+      <Route path='/under' element={<UnderReview/>}/> 
+      <Route path='/local' element={<Localbank/>}/>
+      <Route path='/domain' element={<Domain/>}/>
+    </Routes>
    </BrowserRouter>
   );
 }

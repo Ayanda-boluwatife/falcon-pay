@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiRightArrow } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import SideNavBar from '../Asidebar/SideNavBar';
 import SearchNavBar from '../SearchComponents/SearchNavBar';
@@ -24,7 +25,7 @@ const Withdraw = () => {
               <div className='one'>
                 <img src='/bolu-images/Group 40.png' alt='' />
                 <div>
-                  <h1>withdraw to local bank</h1>
+                  <h1><Link to={'/local'}>Withdraw to local bank</Link></h1>
                   <p>instant withdraw to your bank account.</p>
                 </div>
               </div>
