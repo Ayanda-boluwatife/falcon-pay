@@ -12,6 +12,7 @@ import GovernmentIdentity from './Dashboard-Items/GovernmentIdentity';
 import Profile from './Dashboard-Items/Profile';
 import Refferal from './Dashboard-Items/Refferal';
 import Community from './Dashboard-Items/Community';
+import Getsupport from './Dashboard-Items/Getsupport';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Route path='/profile' element={<Profile />} />
       <Route path='/refferal' element={<Refferal />} />
       <Route path='/community' element={<Community />} />
+      <Route path='/get_support' element={<Getsupport />} />
      </Routes>
    </BrowserRouter>
   );

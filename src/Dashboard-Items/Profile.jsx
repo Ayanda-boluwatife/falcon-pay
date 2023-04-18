@@ -121,5 +121,17 @@ const Wrapper = styled.section`
         border-radius: 10px;
         border: none;
     }
+
+    @media screen and (max-width:950px) {
+        .lobby{
+            flex-direction: column;
+        }
+        .setting{
+            width: 100%;
+        }
+        .your-profile{
+            width: 100%;
+        }
+    }
 `
 export default Profile;

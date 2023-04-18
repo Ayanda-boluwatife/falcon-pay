@@ -18,7 +18,7 @@ const SearchNavBar = (props) => {
       <div className={sectionClassName}>
         <h1>{props.heading}</h1>
         <form>
-            <input type={props.inputType} className={props.inputClass} placeholder="Search here........." />
+            <input type={props.inputType} className="search" placeholder="Search here........." />
         </form>
         <div className='profile-area'>
         {
@@ -91,6 +91,11 @@ display:flex;
   width: 100%;
   color: white;
   cursor: pointer;
+}
+@media screen and (max-width:950px) {
+  form input{
+    width: 100px;
+  }
 }
 `
 export default SearchNavBar;

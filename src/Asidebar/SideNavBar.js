@@ -10,9 +10,13 @@ import { Link } from 'react-router-dom';
 
 const SideNavBar = () => {
     const [showSidebar, setShowSidebar] = useState(false);
+    const [showSidebarmobile, setShowSidebarmobile] = useState(false);
 
     const handleToggleSidebar = () => {
         setShowSidebar(!showSidebar);
+      };
+    const handleToggleSidebarmobile = () => {
+        setShowSidebarmobile(!showSidebarmobile);
       };
   return (
     <Wrapper>
@@ -55,10 +59,60 @@ const SideNavBar = () => {
                         <Link to={'/community'}><span><IoIosPeople /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Community</span></Link>
                     </li>
                     <li>
-                        <Link><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</span></Link>
+                        <Link to={'/get_support'}><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</span></Link>
                     </li>
                     <li>
                         <Link to={"/signin"}><span><FiLogOut /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Log Out</span></Link>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+{/* ======================== mobile sidenavbar ======================== */}
+        <span onClick={handleToggleSidebarmobile} className='trans'><AiOutlineMenu /></span>
+
+        <aside className={`mobile ${showSidebarmobile ? 'mo-open' : ''}`}>
+            <div className='nav'>
+                <Link>
+                    <img src="/bolu-images/falconPay.png" alt="" className={`h4 ${showSidebar ? 'no-none' : ''}`}/>
+                </Link>
+            </div>
+
+            <div className='main-dashboard link-group'>
+                <h4 className={`h4 ${showSidebarmobile ? 'no-hide' : ''}`}>Account</h4>
+                <ul className='link-items'>
+                    <li>
+                        <Link to={"/dashboard"}><span><MdOutlineDashboard /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>  Dashboard</span></Link>
+                    </li>
+                    <li>
+                        <Link to={"/bankdetails"}><span><RiBankFill /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>Bank Details</span></Link>
+                    </li>
+                    <li>
+                        <Link to={"/withdraw"}> <span><RiWallet3Fill /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>Withdrawal</span></Link>
+                    </li>
+                    <li>
+                        <Link to={"/payment-history"}><span><MdOutlinePayments /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}> Payment History</span></Link>
+                    </li>
+                    <li>
+                        <Link to={'/profile'}><span><RiAccountBoxFill /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}> Profile</span></Link>
+                    </li>
+                </ul>
+            </div>
+
+            <div className='main-setting link-group'>
+                <h4 className={`h4 ${showSidebarmobile ? 'no-hide' : ''}`}>Settings</h4>
+                <ul className='link-items'>
+                    <li>
+                        <Link to={'/refferal'}><span><MdSupervisorAccount /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>Referral</span></Link>
+                    </li>
+                    <li>
+                        <Link to={'/community'}><span><IoIosPeople /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>Community</span></Link>
+                    </li>
+                    <li>
+                        <Link to={'/get_support'}><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>Get Support</span></Link>
+                    </li>
+                    <li>
+                        <Link to={"/signin"}><span><FiLogOut /></span><span className={`h4 ${showSidebarmobile ? 'no-none' : ''}`}>Log Out</span></Link>
                     </li>
                 </ul>
             </div>
@@ -83,6 +137,10 @@ const Wrapper = styled.section`
 .sidebar.open {
   width:57px;
   transition: ease-in-out .1s;
+}
+
+.mobile{
+    display: none;
 }
 
 .nav a{
@@ -132,14 +190,30 @@ svg{
 }
 @media screen and (max-width:900px) {
     .sidebar{
-        width:30%;
-        height: 100vh;
+        display: none;
     }
     .sidebar.open{
-        width:10%;
+        display: none;
     }
     .link-group > h4{
         padding-top: 20px;
+    }
+    .mobile.mo-open{
+        padding: 16px ;
+        width: 250px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: ease-in-out .1s;
+        background-color: black;
+        display: flex; 
+        overflow-y: hidden;
+        flex-direction: column;
+    }
+    .trans{
+        position: relative;
+        z-index: 1000;
     }
 }
 `

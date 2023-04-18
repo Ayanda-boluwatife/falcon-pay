@@ -137,5 +137,10 @@ const Wrapper = styled.section`
         display: flex;
         gap: 10px;
     }
+    @media screen and (max-width:950px) {
+        .community{
+            padding-left: 0;
+        }
+    }
 `
 export default Community
