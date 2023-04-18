@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { BiPlus, BiServer } from 'react-icons/bi'
 import SearchNavBar from '../SearchComponents/SearchNavBar'
 import SideNavBar from '../Asidebar/SideNavBar'
+import { FaShoppingCart  } from 'react-icons/fa';
 
 const Dashboard = () => {
   return (
@@ -53,44 +54,44 @@ const Dashboard = () => {
         </div>
 
         <div className='table'>
-            <table>
-            <tr>
-                <th>Transaction</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Date</th>
-            </tr>
-            <tr>
-                <td><BiServer />Transaction to Jays</td>
-                <td>$3000</td>
-                <td><span className='sent'>sent</span></td>
-                <td>12-6-2022</td>
-            </tr>
-            <tr>
-                <td><BiServer />From Fiverr Account</td>
-                <td>$5000</td>
-                <td><span className='recieved'>Recieved</span></td>
-                <td>12-6-2022</td>
-            </tr>
-            <tr>
-                <td><BiServer />Local Bank Transfer</td>
-                <td>$3000</td>
-                <td><span className='sent'>sent</span></td>
-                <td>12-6-2022</td>
-            </tr>
-            <tr>
-                <td><BiServer />Transaction to Jays</td>
-                <td>$3000</td>
-                <td><span className='processing'>processing</span></td>
-                <td>12-6-2022</td>
-            </tr>
-            <tr>
-                <td><BiServer />Transaction to Jays</td>
-                <td>$3000</td>
-                <td><span className='sent'>sent</span></td>
-                <td>12-6-2022</td>
-            </tr>
-            </table>
+        <table>
+                        <tr>
+                            <th>Transaction</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                        <tr>
+                            <td><span><BiServer/></span> <span className="shift">transfer to jays</span></td>
+                            <td>$3000</td>
+                            <td><span className='sent'>sent</span></td>
+                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
+                        </tr>
+                        <tr>
+                            <td><span><BiServer/></span><span className="shift">from fiverr account</span></td>
+                            <td>$5000</td>
+                            <td><span className="receive">received</span></td> 
+                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
+                        </tr>
+                        <tr>
+                            <td><span><BiServer/></span> <span className='shift'>local bank transfer</span></td>
+                            <td>$3000</td>
+                            <td><span className='sent'>sent</span></td>
+                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
+                        </tr>
+                        <tr>
+                            <td><span><BiServer/></span> <span className="shift">transfer to jays</span></td>
+                            <td>$3000</td>
+                            <td><span className="process">processing</span></td>
+                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
+                        </tr>
+                        <tr>
+                            <td><span><BiServer/></span> <span className='shift'>transfer to jays</span></td>
+                            <td>$3000</td>
+                            <td><span className='sent'>sent</span></td>
+                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
+                        </tr>
+                    </table>
         </div>
         </div>
     </Wrapper>
@@ -107,34 +108,58 @@ display: flex;
     /* height: 100vh; */
 }
 table{
-    width: 100%;
-    background-color: #F7F7F7;
-}
-tr{
-    text-align: center;
-}
-
-th{
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-.sent{
-    background-color: #FE1515;
-    padding: 5px 5px;
-    width: 15px;
-    border-radius: 20px;
-}
-.processing{
-    background-color: #FEE715;
-    width: 20px;
-    padding: 5px 5px;
-    border-radius: 20px;
-}
-.recieved{
-    background-color: #90EE90;
-    width: 20px;
-    padding: 5px 5px;
-    border-radius: 20px;
-}
+        text-transform: capitalize;
+        width: 100%;
+        border-collapse: collapse;
+        transition: all 1s ease;
+    }
+    th,td{
+        border-bottom: 1px solid rgba(103, 96, 96, 0.4);
+        padding: 20px 0;
+    }
+    table tr th:nth-of-type(1){
+        width: 38%;
+    }
+    table tr th:nth-of-type(4){
+        width: 27%;
+    }
+    table tr th:nth-of-type(3){
+        width: 15%;
+    }
+    table tr th:nth-of-type(2){
+        width: 20%;
+    }
+    table tr td:nth-of-type(1){
+        width: 38%;
+    }
+    table tr td:nth-of-type(2){
+        width: 20%;
+        text-align: center;
+    }
+    table tr td:nth-of-type(3){
+        width: 15%;
+        text-align: center;
+    }
+    table tr td:nth-of-type(4){
+        width: 27%;
+        text-align: center;
+    }
+    .sent{
+        background-color: red;
+        border-radius: 25px;
+        padding: 3% 7%;
+        width: 0;
+    }
+    .process{
+        border-radius: 25px;
+        background-color: #90EE90;
+        padding: 3% 7%;
+    }
+    .receive{
+        background-color: yellow;
+        padding: 3% 7%;
+        border-radius: 25px;
+    }
 .welcome-message{
     background-color: black;
     color: white;

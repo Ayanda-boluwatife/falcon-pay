@@ -1,3 +1,4 @@
+
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,7 +13,14 @@ import GovernmentIdentity from './Dashboard-Items/GovernmentIdentity';
 import Profile from './Dashboard-Items/Profile';
 import Refferal from './Dashboard-Items/Refferal';
 import Community from './Dashboard-Items/Community';
-import Getsupport from './Dashboard-Items/Getsupport';
+import GovtInner from './Dashboard-Items/GovtInner';
+import Govtouter from './Dashboard-Items/Govtouter';
+import Review from './Dashboard-Items/Review';
+import UnderReview from './Dashboard-Items/UnderReview';
+import Localbank from './Dashboard-Items/Localbank';
+import Domain from './Dashboard-Items/Domain';
+import PaymentHistory from './Dashboard-Items/PaymentHistory';
+import ShareToFriends from './Dashboard-Items/ShareToFriends';
 
 function App() {
   return (
@@ -28,10 +36,17 @@ function App() {
       <Route path='/verify_your_kyc' element={<VerifyYourKyc />} />
       <Route path='/government-id' element={<GovernmentIdentity/>} />
       <Route path='/profile' element={<Profile />} />
-      <Route path='/refferal' element={<Refferal />} />
+      <Route path='/payment_history' element={<PaymentHistory />} />
+      <Route path='/referral' element={<Refferal />} />
       <Route path='/community' element={<Community />} />
-      <Route path='/get_support' element={<Getsupport />} />
-     </Routes>
+      <Route path='/govtinner' element={<GovtInner />} />
+      <Route path='/govtouter' element={<Govtouter />}/>
+      <Route path='/review' element={<Review />}/>
+      <Route path='/under' element={<UnderReview/>}/> 
+      <Route path='/local' element={<Localbank/>}/>
+      <Route path='/domain' element={<Domain/>}/>
+      <Route path='/share_to_friends' element={<ShareToFriends />} />
+    </Routes>
    </BrowserRouter>
   );
 }

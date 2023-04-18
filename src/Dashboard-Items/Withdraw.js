@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiRightArrow } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import SideNavBar from '../Asidebar/SideNavBar';
 import SearchNavBar from '../SearchComponents/SearchNavBar';
@@ -24,7 +25,7 @@ const Withdraw = () => {
               <div className='one'>
                 <img src='/bolu-images/Group 40.png' alt='' />
                 <div>
-                  <h1>withdraw to local bank</h1>
+                  <h1><Link to={'/local'}>Withdraw to local bank</Link></h1>
                   <p>instant withdraw to your bank account.</p>
                 </div>
               </div>
@@ -34,7 +35,7 @@ const Withdraw = () => {
               <div className='two'>
                 <img src='/bolu-images/Group 39.png' alt='' />
                 <div>
-                  <h1>withdraw to domain account</h1>
+                  <Link to={'/domain'}><h1>withdraw to domain account</h1></Link>
                   <p>received payments to our domain account.</p>
                 </div>
               </div>
@@ -44,7 +45,7 @@ const Withdraw = () => {
               <div className='three'>
                 <img src='/bolu-images/Group 38.png' alt='' />
                 <div>
-                  <h1>sell funds to us</h1>
+                  <Link><h1>sell funds to us</h1></Link>
                   <p>we're buying funds with good rate.</p>
                 </div>
               </div>
@@ -54,7 +55,7 @@ const Withdraw = () => {
               <div className='four'>
                 <img src='/bolu-images/Group 38.png' alt='' />
                 <div>
-                  <h1>send to friends</h1>
+                  <Link to={'/share_to_friends'}><h1>send to friends</h1></Link>
                   <p>send funds to your friends, families, and neighbors.</p>
                 </div>
               </div>
