@@ -103,7 +103,7 @@ width: 100%;
     border: none;
     box-shadow: 1px 0px 11px rgba(0, 0, 0, 0.15);
 }
-.toggle-bg-color.light-mode {
+/* .toggle-bg-color.light-mode {
   width: 100%;
   background-color: #fff;
   cursor: pointer;
@@ -113,7 +113,7 @@ width: 100%;
   width: 100%;
   color: white;
   cursor: pointer;
-}
+} */
 @media screen and (max-width: 950px) {
   .toggle-bg-color{
     flex-direction: column-reverse;

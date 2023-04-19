@@ -15,7 +15,8 @@ import Refferal from './Dashboard-Items/Refferal';
 import Community from './Dashboard-Items/Community';
 import GovtInner from './Dashboard-Items/GovtInner';
 import Govtouter from './Dashboard-Items/Govtouter';
-import Review from './Dashboard-Items/Review';
+import Getsupport from './Dashboard-Items/Govtouter';
+import Review from './Dashboard-Items/Getsupport';
 import UnderReview from './Dashboard-Items/UnderReview';
 import Localbank from './Dashboard-Items/Localbank';
 import Domain from './Dashboard-Items/Domain';
@@ -41,6 +42,7 @@ function App() {
       <Route path='/community' element={<Community />} />
       <Route path='/govtinner' element={<GovtInner />} />
       <Route path='/govtouter' element={<Govtouter />}/>
+      <Route path='/get_support' element={<Getsupport />} />
       <Route path='/review' element={<Review />}/>
       <Route path='/under' element={<UnderReview/>}/> 
       <Route path='/local' element={<Localbank/>}/>

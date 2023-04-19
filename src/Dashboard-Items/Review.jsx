@@ -30,7 +30,9 @@ const Review = () => {
                             <p>Alimi Moh-jamiu</p>
                             <p>Talk2jaysox@gmail.com</p>
                             <p>DSCDSCCS.png</p>
-                            <p>Jays-image.png</p>
+                            <p>
+                                <div className="pro-pic"></div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -67,9 +69,15 @@ width:100%;
     justify-content:space-between;
     /* background-color:#F7F7F7; */
 }
+.pro-pic{
+    background-color: gray;
+    width: 15%;
+    padding: 40px 40px;
+    border-radius: 50px
+}
 .firm{
     background-color:#F7F7F7;
-    padding:70px 100px;
+    padding:40px 80px;
     display:flex;
     flex-direction:column;
     gap:40px;

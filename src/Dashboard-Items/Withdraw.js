@@ -99,8 +99,11 @@ width: 100%;
 .border{
   border-top: 1px solid black;
 }
+a{
+  color: black;
+}
 @media screen and (max-width:900px){
-  .first, .second, .third, .fourth
+
 }
 `
 export default Withdraw;

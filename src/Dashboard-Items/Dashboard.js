@@ -16,7 +16,7 @@ const Dashboard = () => {
             heading = "Dashboard"
             inputType = "search"
             />
-        <div className='first-row page-center'>
+        <div className='first-row'>
             <div className='welcome-message'>
                 <div>
                     <h1>Welcome Jays.....</h1>
@@ -33,7 +33,7 @@ const Dashboard = () => {
         </div>
 
 
-        <div className='second-row page-center'>
+        <div className='second-row'>
             <div className='balance-1'>
                 <p>Account Balance</p>
                 <h1><span>$</span>20,500</h1>
@@ -73,24 +73,6 @@ const Dashboard = () => {
                             <td><span className="receive">received</span></td> 
                             <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
                         </tr>
-                        <tr>
-                            <td><span><BiServer/></span> <span className='shift'>local bank transfer</span></td>
-                            <td>$3000</td>
-                            <td><span className='sent'>sent</span></td>
-                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
-                        </tr>
-                        <tr>
-                            <td><span><BiServer/></span> <span className="shift">transfer to jays</span></td>
-                            <td>$3000</td>
-                            <td><span className="process">processing</span></td>
-                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
-                        </tr>
-                        <tr>
-                            <td><span><BiServer/></span> <span className='shift'>transfer to jays</span></td>
-                            <td>$3000</td>
-                            <td><span className='sent'>sent</span></td>
-                            <td>{new Date().toLocaleDateString()} <span><FaShoppingCart/></span></td>
-                        </tr>
                     </table>
         </div>
         </div>
@@ -99,7 +81,6 @@ const Dashboard = () => {
 }
 const Wrapper = styled.section`
 width: 100%;
-height: 100vh;
 background-color: white;
 display: flex;
 
@@ -108,10 +89,10 @@ display: flex;
     /* height: 100vh; */
 }
 table{
-        text-transform: capitalize;
-        width: 100%;
-        border-collapse: collapse;
-        transition: all 1s ease;
+    text-transform: capitalize;
+    width: 100%;
+    border-collapse: collapse;
+    transition: all 1s ease;
     }
     th,td{
         border-bottom: 1px solid rgba(103, 96, 96, 0.4);
@@ -176,7 +157,7 @@ table{
 }
 .first-row{
     display: flex;
-    justify-content: space-around;
+    gap: 30px;
     padding: 40px;
 }
 .bill-payment{
@@ -184,13 +165,14 @@ table{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: 20%;
     border-radius: 20px;
 }
 .second-row{
     display: flex;
-    justify-content: space-around;
+    padding-left: 40px;
+    gap: 10px;
 }
 .balance-1{
     background-color:#90EE90;
@@ -199,7 +181,7 @@ table{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 30%;
     height: 20vh;
     border-radius: 20px;
 }
@@ -211,7 +193,7 @@ table{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 30%;
     height: 20vh;
     border-radius: 20px;
 }
@@ -222,7 +204,7 @@ table{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 30%;
     height: 20vh;
     border-radius: 20px;
 }
@@ -261,7 +243,9 @@ table{
     }
     .second-row{
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        padding-left: 0;
+        padding: 40px;
     }
     .balance-1, .balance-2, .balance-3{
         width: 100%;

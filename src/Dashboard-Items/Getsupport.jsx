@@ -9,16 +9,23 @@ const Getsupport = () => {
         <div>
           <SideNavBar />
         </div>
-        <div>
-          <SearchNavBar
-          heading ="Get Support"
-          inputType ="inputType"
-          />
+        <div className="main">
+          <div>
+            <SearchNavBar
+            heading ="Get Support"
+            inputType ="inputType"
+            />
+          </div>
         </div>
     </Wrapper>
   )
 }
 const Wrapper = styled.section`
-    
+ display: flex;
+ width: 100%;
+
+ .main{
+  width: 100%;
+ }
 `
 export default Getsupport;

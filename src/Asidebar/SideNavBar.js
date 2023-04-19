@@ -60,13 +60,13 @@ const SideNavBar = () => {
                 <h4 className={`h4 ${showSidebar ? 'hide' : ''}`}>Settings</h4>
                 <ul className='link-items'>
                     <li>
-                        <Link to={'referral'}><span><MdSupervisorAccount /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Referral</span></Link>
+                        <Link to={'/referral'}><span><MdSupervisorAccount /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Referral</span></Link>
                     </li>
                     <li>
-                        <Link to={'community'}><span><IoIosPeople /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Community</span></Link>
+                        <Link to={'/community'}><span><IoIosPeople /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Community</span></Link>
                     </li>
                     <li>
-                        <Link to={'get_support'}><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</span></Link>
+                        <Link to={'/get_support'}><span><FaRegQuestionCircle /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Get Support</span></Link>
                     </li>
                     <li>
                         <Link to={"/signin"}><span><FiLogOut /></span><span className={`h4 ${showSidebar ? 'none' : ''}`}>Log Out</span></Link>
@@ -97,7 +97,7 @@ const SideNavBar = () => {
                         <Link to={"/payment_history"}><span><MdOutlinePayments /></span><span className={`h4`}> Payment History</span></Link>
                     </li>
                     <li>
-                        <Link to={'profile'}><span><RiAccountBoxFill /></span><span className={`h4`}> Profile</span></Link>
+                        <Link to={'/profile'}><span><RiAccountBoxFill /></span><span className={`h4`}> Profile</span></Link>
                     </li>
                 </ul>
             </div>
@@ -106,13 +106,13 @@ const SideNavBar = () => {
                 <h4 className={`h4`}>Settings</h4>
                 <ul className='link-items'>
                     <li>
-                        <Link to={'referral'}><span><MdSupervisorAccount /></span><span className={`h4`}>Referral</span></Link>
+                        <Link to={'/referral'}><span><MdSupervisorAccount /></span><span className={`h4`}>Referral</span></Link>
                     </li>
                     <li>
-                        <Link to={'community'}><span><IoIosPeople /></span><span className={`h4`}>Community</span></Link>
+                        <Link to={'/community'}><span><IoIosPeople /></span><span className={`h4`}>Community</span></Link>
                     </li>
                     <li>
-                        <Link to={'get_support'}><span><FaRegQuestionCircle /></span><span className={`h4`}>Get Support</span></Link>
+                        <Link to={'/get_support'}><span><FaRegQuestionCircle /></span><span className={`h4`}>Get Support</span></Link>
                     </li>
                     <li>
                         <Link to={"/signin"}><span><FiLogOut /></span><span className={`h4`}>Log Out</span></Link>
@@ -213,7 +213,7 @@ svg{
        display: none;
     }
     .toggle{
-        display: none;
+        display: block;
     }
     .sidebar.open{
         width:10%;

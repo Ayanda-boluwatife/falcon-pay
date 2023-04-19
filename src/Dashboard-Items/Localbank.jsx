@@ -64,7 +64,7 @@ width:100%;
 }
 .bun button{
   background-color: lightgreen;
-  padding: 15px 50px;
+  padding: 15px ;
   border: none;
   border-radius:10px;
   font-size:20px;
@@ -73,7 +73,7 @@ width:100%;
 }
 .butt-1 button{
   background-color: #F7F7F7;
-  padding: 15px 300px;
+  padding: 15px ;
   border: none;
   border-radius:10px;
   font-size:20px;
@@ -102,6 +102,15 @@ width:100%;
 .alimi-1{
     display:flex;
     justify-content:space-between;
+}
+@media screen and (max-width:950px) {
+   .butt{
+    flex-direction: column;
+   } 
+   .butt-1 button{
+    width: 100%;
+   }
+    
 }
 `
 export default Localbank
