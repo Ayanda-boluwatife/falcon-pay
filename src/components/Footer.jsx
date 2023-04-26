@@ -7,7 +7,7 @@ return(
         <div className="one">
         <div className="page-center">
           <div >
-            <div className="all-first">
+            <div className="all-first page-center">
                 <div className="first">
                     <ul>
                         <li>
@@ -41,11 +41,13 @@ return(
                     <li>Blog</li>
                     <li>Career</li>
                     <li>FAQ</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy & Policy</li>
                     </ul>
                 </div>
                 </div>
             <div className="foot">
-            <p>terms & conditions          |          privacy & policy</p>
+            <p></p>
         </div>
             </div>
         
@@ -92,6 +94,7 @@ const Wrapper = styled.article `
     .all-first li{
         line-height: 2.7rem;
         cursor: pointer;
+        display: flex;
     }
     .all-first li:hover{
         color: #7ED07E;
@@ -157,10 +160,12 @@ const Wrapper = styled.article `
     @media screen and (max-width:768px) {
         .all-first{
         display: flex;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
       
-    }        
+    }    
+       
     .first{
         width: 100%;
     }
@@ -194,7 +199,7 @@ const Wrapper = styled.article `
         align-items: flex-;
         justify-content: space-between;
     }
-    } 
+} 
 `
 
 export default Footer;

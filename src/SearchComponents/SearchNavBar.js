@@ -1,7 +1,6 @@
 
 import {React, useState} from 'react'
-import { MdOutlineNightlight, MdOutlineNotificationsNone } from 'react-icons/md';
-import { BiSun } from 'react-icons/bi';
+import { MdOutlineNotificationsNone } from 'react-icons/md';
 import styled from 'styled-components';
 
 const SearchNavBar = (props) => {
@@ -23,9 +22,6 @@ const SearchNavBar = (props) => {
               <input type={props.inputType}  placeholder="Search here........." />
           </form>
           <div className='profile-area'>
-            {
-                isLightMode? <span onClick={handleToggle}><MdOutlineNightlight /></span> : <span onClick={handleToggle}><BiSun /></span>
-            }
             <span><MdOutlineNotificationsNone /></span>
             <div className='profile'></div>
           </div>
@@ -128,6 +124,9 @@ width: 100%;
   }
   .toggle-bg-color input{
     width: 90%;
+  }
+  .profile{
+    margin-right: 20px;
   }
 }
 `
