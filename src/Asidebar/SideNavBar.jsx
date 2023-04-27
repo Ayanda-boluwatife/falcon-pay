@@ -20,9 +20,91 @@ const SideNavBar = () => {
   // const handleMobileToggle = () =>{
   //   setActive(!active)
   // }
+
+  const [showFeature1, setShowFeature1] = useState(false);
+  const [showFeature2, setShowFeature2] = useState(false);
+  const [showFeature3, setShowFeature3] = useState(false);
+  const [showFeature4, setShowFeature4] = useState(false);
+  const [showFeature5, setShowFeature5] = useState(false);
+  const [showFeature6, setShowFeature6] = useState(false);
+  const [showFeature7, setShowFeature7] = useState(false);
+  const [showFeature8, setShowFeature8] = useState(false);
+  const [showFeature9, setShowFeature9] = useState(false);
+
+  const handleMouseEnter1 = () => {
+    setShowFeature1(true);
+  };
+
+  const handleMouseLeave1 = () => {
+    setShowFeature1(false);
+  };
+
+  const handleMouseEnter2 = () => {
+    setShowFeature2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setShowFeature2(false);
+  };
+
+  const handleMouseEnter3 = () => {
+    setShowFeature3(true);
+  };
+
+  const handleMouseLeave3 = () => {
+    setShowFeature3(false);
+  };
+
+  const handleMouseEnter4 = () => {
+    setShowFeature4(true);
+  };
+
+  const handleMouseLeave4 = () => {
+    setShowFeature4(false);
+  };
+
+  const handleMouseEnter5 = () => {
+    setShowFeature5(true);
+  };
+
+  const handleMouseLeave5 = () => {
+    setShowFeature5(false);
+  };
+
+  const handleMouseEnter6 = () => {
+    setShowFeature6(true);
+  };
+
+  const handleMouseLeave6 = () => {
+    setShowFeature6(false);
+  };
+
+  const handleMouseEnter7 = () => {
+    setShowFeature7(true);
+  };
+
+  const handleMouseLeave7 = () => {
+    setShowFeature7(false);
+  };
+
+  const handleMouseEnter8 = () => {
+    setShowFeature8(true);
+  };
+
+  const handleMouseLeave8 = () => {
+    setShowFeature8(false);
+  };
+
+  const handleMouseEnter9 = () => {
+    setShowFeature9(true);
+  };
+
+  const handleMouseLeave9 = () => {
+    setShowFeature9(false);
+  };  
   return (
     <Wrapper>
-        <aside className={` ${desktopToggle  ? 'aside-desktop' : 'aside-desktop-open'}`}>
+        <aside className={` ${desktopToggle  ? ' aside-desktop-open' : 'aside-desktop'}`}>
           <div className="aside-header">
             <div className="logo">
               <span onClick={handleDesktopSideBar}><AiOutlineMenu /></span>
@@ -31,19 +113,109 @@ const SideNavBar = () => {
           </div>
           <div className="aside-items">
             <ol>
-              <Link><li className={` ${active ? 'active' : ''}`}><MdOutlineDashboard /><span className={`${desktopToggle ? 'none' : 'block'}`}>Dashboard</span> </li></Link>
-              <Link><li><RiBankFill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Bank Details</span> </li></Link>
-              <Link><li><MdOutlinePayments /><span className={`${desktopToggle ? 'none' : 'block'}`}> Withdrawal</span></li></Link>
-              <Link><li><RiWallet3Fill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Payment History</span> </li></Link>
-              <Link><li><MdSupervisorAccount /><span className={`${desktopToggle ? 'none' : 'block'}`}>Profile</span> </li></Link>
+              <Link to={'/dashboard'}>
+                <li className={` ${active ? 'active' : ''}`} onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
+                  <MdOutlineDashboard />
+                  {showFeature1 && (
+                    <div className="tooltip">
+                      <p>Dashboard</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Dashboard</span> 
+                </li>
+              </Link>
+              <Link to={'/bankdetails'}>
+                <li onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
+                  <RiBankFill />
+                  {showFeature2 && (
+                    <div className="tooltip">
+                      <p>Bank Details</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Bank Details</span>
+                </li>
+              </Link>
+              <Link to={'/withdraw'}>
+                <li onMouseEnter={handleMouseEnter3} onMouseLeave={handleMouseLeave3}>
+                  <MdOutlinePayments />
+                  {showFeature3 && (
+                    <div className="tooltip">
+                      <p>Withdrawal</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}> Withdrawal</span>
+                </li>
+              </Link>
+              <Link to={'/payment_history'}>
+                <li onMouseEnter={handleMouseEnter4} onMouseLeave={handleMouseLeave4}>
+                  <RiWallet3Fill />
+                  {showFeature4 && (
+                    <div className="tooltip">
+                      <p>Payment History</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Payment History</span>
+                </li>
+              </Link>
+              <Link to={'/profile'}>
+                <li onMouseEnter={handleMouseEnter5} onMouseLeave={handleMouseLeave5}>
+                  <MdSupervisorAccount />
+                  {showFeature5 && (
+                    <div className="tooltip">
+                      <p>Profile</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Profile</span>
+                </li>
+              </Link>
             </ol>
           </div>
           <div className="aside-items-2">
             <ol>
-              <Link><li><RiAccountBoxFill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Referral</span> </li></Link>
-              <Link><li><IoIosPeople /><span className={`${desktopToggle ? 'none' : 'block'}`}>Community</span> </li></Link>
-              <Link><li><FaRegQuestionCircle /><span className={`${desktopToggle ? 'none' : 'block'}`}>Get Support</span> </li></Link>
-              <Link><li><FiLogOut /> <span className={`${desktopToggle ? 'none' : 'block'}`}>Logout</span> </li></Link>
+              <Link to={'/referral'}>
+                <li onMouseEnter={handleMouseEnter6} onMouseLeave={handleMouseLeave6}>
+                  <RiAccountBoxFill />
+                  {showFeature6 && (
+                    <div className="tooltip">
+                      <p>Referral</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Referral</span>
+                </li>
+              </Link>
+              <Link to={'/community'}>
+                <li onMouseEnter={handleMouseEnter7} onMouseLeave={handleMouseLeave7}>
+                  <IoIosPeople />
+                  {showFeature7 && (
+                    <div className="tooltip">
+                      <p>Community</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Community</span>
+                </li>
+              </Link>
+              <Link to={'/get_suppor'}>
+                <li onMouseEnter={handleMouseEnter8} onMouseLeave={handleMouseLeave8}>
+                  <FaRegQuestionCircle />
+                  {showFeature8 && (
+                    <div className="tooltip">
+                      <p>Get Support</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Get Support</span>
+                </li>
+              </Link>
+              <Link to={'/signin'}>
+                <li onMouseEnter={handleMouseEnter9} onMouseLeave={handleMouseLeave9}>
+                  <FiLogOut />
+                  {showFeature9 && (
+                    <div className="tooltip">
+                      <p>Log Out</p>
+                    </div>
+                  )}
+                  <span className={`${desktopToggle ? 'none' : 'block'}`}>Log Out</span>
+                </li>
+              </Link>
             </ol>
           </div>
         </aside>
@@ -71,7 +243,7 @@ width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-top-right-radius: 20px;
+  transition: all 0.5s ease;
 }
 
 a{
@@ -112,6 +284,10 @@ ol li{
   display: block;
 }
 
+.tooltip{
+  display: none;
+}
+
 .aside-items ol li:hover, .aside-items-2 ol li:hover{
   background: linear-gradient(to right, #000, #fff);
   color: #90EE90;
@@ -129,7 +305,6 @@ ol li{
   padding: 20px;
   background-color: #000;
   color: #fff;
-  position: fixed;
   height: 100vh;
   font-size: 20px;
 }
@@ -148,9 +323,16 @@ ol li{
   .aside-desktop{
     position: absolute;
     visibility: hidden;
+    transition: none;
   }
   .aside-desktop-open{
     position: absolute;
+  }
+  .tooltip{
+    display: block;
+  }
+  .aside-items ol li, .aside-items-2 ol li{
+    background-color: transparent;
   }
   /* .aside-mobile{
     display: none;
