@@ -9,7 +9,7 @@ import {FiLogOut} from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const SideNavBar = () => {
-  const [desktopToggle, setDesktopToggle] = useState(true);
+  const [desktopToggle, setDesktopToggle] = useState(false);
 
   const handleDesktopSideBar = () =>{
     setDesktopToggle(!desktopToggle)
