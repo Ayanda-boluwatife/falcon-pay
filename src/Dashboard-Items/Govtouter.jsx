@@ -89,5 +89,11 @@ const Wrapper = styled.section`
     flex-direction: column;
     gap: 20px;
    }
+   @media screen and (max-width:950px) {
+    .main-content{
+        flex-direction: column;
+        gap: 40px;
+    }
+   }
 `
 export default Govtouter

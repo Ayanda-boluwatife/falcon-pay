@@ -56,9 +56,9 @@ const Wrapper = styled.section`
 display: flex;
 width: 100%;
 
-.search{
+/* .search{
   width: 100%;
-}
+} */
 .government-id{
   width: 100%;
 }

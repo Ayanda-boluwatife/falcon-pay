@@ -141,6 +141,9 @@ const Wrapper = styled.section`
         .community{
             padding-left: 0;
         }
+        .main{
+            padding: 20px;
+        }
     }
 `
 export default Community

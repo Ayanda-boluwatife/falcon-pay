@@ -6,22 +6,23 @@ import {RiBankFill, RiWallet3Fill, RiAccountBoxFill} from 'react-icons/ri';
 import {IoIosPeople} from 'react-icons/io';
 import {FaRegQuestionCircle} from 'react-icons/fa';
 import {FiLogOut} from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const SideNavBar = () => {
-  const [desktopToggle, setDesktopToggle] = useState(false);
+  const [desktopToggle, setDesktopToggle] = useState(true);
 
   const handleDesktopSideBar = () =>{
     setDesktopToggle(!desktopToggle)
   }
 
-  const [mobileToggle, setMobileToggle] = useState(false);
+  const [active, setActive] = useState(true);
 
-  const handleMobileToggle = () =>{
-    setMobileToggle(!mobileToggle)
-  }
+  // const handleMobileToggle = () =>{
+  //   setActive(!active)
+  // }
   return (
     <Wrapper>
-        <aside className={` ${desktopToggle  ? 'aside-desktop-open' : 'aside-desktop'}`}>
+        <aside className={` ${desktopToggle  ? 'aside-desktop' : 'aside-desktop-open'}`}>
           <div className="aside-header">
             <div className="logo">
               <span onClick={handleDesktopSideBar}><AiOutlineMenu /></span>
@@ -30,50 +31,24 @@ const SideNavBar = () => {
           </div>
           <div className="aside-items">
             <ol>
-              <li className='active'><MdOutlineDashboard /><span className={`${desktopToggle ? 'none' : 'block'}`}>Dashboard</span> </li>
-              <li><RiBankFill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Bank Details</span> </li>
-              <li><MdOutlinePayments /><span className={`${desktopToggle ? 'none' : 'block'}`}> Withdrawal</span></li>
-              <li><RiWallet3Fill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Payment History</span> </li>
-              <li><MdSupervisorAccount /><span className={`${desktopToggle ? 'none' : 'block'}`}>Profile</span> </li>
+              <Link><li className={` ${active ? 'active' : ''}`}><MdOutlineDashboard /><span className={`${desktopToggle ? 'none' : 'block'}`}>Dashboard</span> </li></Link>
+              <Link><li><RiBankFill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Bank Details</span> </li></Link>
+              <Link><li><MdOutlinePayments /><span className={`${desktopToggle ? 'none' : 'block'}`}> Withdrawal</span></li></Link>
+              <Link><li><RiWallet3Fill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Payment History</span> </li></Link>
+              <Link><li><MdSupervisorAccount /><span className={`${desktopToggle ? 'none' : 'block'}`}>Profile</span> </li></Link>
             </ol>
           </div>
           <div className="aside-items-2">
             <ol>
-              <li><RiAccountBoxFill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Referral</span> </li>
-              <li><IoIosPeople /><span className={`${desktopToggle ? 'none' : 'block'}`}>Community</span> </li>
-              <li><FaRegQuestionCircle /><span className={`${desktopToggle ? 'none' : 'block'}`}>Get Support</span> </li>
-              <li><FiLogOut /> <span className={`${desktopToggle ? 'none' : 'block'}`}>Logout</span> </li>
+              <Link><li><RiAccountBoxFill /><span className={`${desktopToggle ? 'none' : 'block'}`}>Referral</span> </li></Link>
+              <Link><li><IoIosPeople /><span className={`${desktopToggle ? 'none' : 'block'}`}>Community</span> </li></Link>
+              <Link><li><FaRegQuestionCircle /><span className={`${desktopToggle ? 'none' : 'block'}`}>Get Support</span> </li></Link>
+              <Link><li><FiLogOut /> <span className={`${desktopToggle ? 'none' : 'block'}`}>Logout</span> </li></Link>
             </ol>
           </div>
         </aside>
-        <span onClick={handleMobileToggle} className='mobiletoggle'><AiOutlineMenu /></span>
-        {/* 
-
-        <aside className='mobile-aside'>
-          <div className="aside-header">
-            <div className="logo">
-              <span onClick={handleDesktopSideBar}><AiOutlineMenu /></span>
-              <img src="/bolu-images/FalconPay.png" alt=""/>
-            </div>
-          </div>
-          <div className="aside-items">
-            <ol>
-              <li className='active'><MdOutlineDashboard /><span>Dashboard</span> </li>
-              <li><RiBankFill /><span>Bank Details</span> </li>
-              <li><MdOutlinePayments /><span> Withdrawal</span></li>
-              <li><RiWallet3Fill /><span>Payment History</span> </li>
-              <li><MdSupervisorAccount /><span>Profile</span> </li>
-            </ol>
-          </div>
-          <div className="aside-items-2">
-            <ol>
-              <li><RiAccountBoxFill /><span>Referral</span> </li>
-              <li><IoIosPeople /><span>Community</span> </li>
-              <li><FaRegQuestionCircle /><span>Get Support</span> </li>
-              <li><FiLogOut /> <span>Logout</span> </li>
-            </ol>
-          </div>
-        </aside> */}
+        <span onClick={handleDesktopSideBar} className='mobiletoggle'><AiOutlineMenu /></span>
+        
     </Wrapper>
   )
 }
@@ -84,6 +59,7 @@ width: 100%;
   display: flex;
   padding: 10px;
   gap: 10px;
+  cursor: pointer;
 }
 
 .aside-desktop{
@@ -94,7 +70,12 @@ width: 100%;
   min-width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  border-top-right-radius: 20px;
+}
+
+a{
+  color: #fff;
 }
 
 .aside-desktop{
@@ -144,10 +125,11 @@ ol li{
   min-width: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   padding: 20px;
   background-color: #000;
   color: #fff;
+  position: fixed;
   height: 100vh;
   font-size: 20px;
 }
@@ -158,17 +140,26 @@ ol li{
 @media screen and (max-width:950px) {
   .mobiletoggle{
     display: block;
-    position: relative;
-    top: 30px;
-    left: 470px;
+    position: absolute;
+    top: 40px;
+    left: 30px;
     font-size: 20px;
   }
   .aside-desktop{
     position: absolute;
+    visibility: hidden;
   }
   .aside-desktop-open{
     position: absolute;
   }
+  /* .aside-mobile{
+    display: none;
+  }
+  .aside-mobile-open{
+    display: flex;
+    width: 80%;
+    position: absolute;
+  } */
 }
 
 `

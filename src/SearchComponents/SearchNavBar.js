@@ -64,8 +64,8 @@ width: 100%;
 }
 .profile{
     background-color: gray;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border-radius: 30px;
 }
 .inputClass{

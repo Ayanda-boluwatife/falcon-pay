@@ -19,7 +19,7 @@ const Refferal = () => {
             </div>
             <div className='main'>
                 <div className='joincomm'>
-                   <div>
+                   <div className='joincomm-cont'>
                         <h1>Empowering your network</h1>
                         <p>Share to Friends and earn 25% when they transfer more than #500</p>
                    </div>
@@ -62,6 +62,7 @@ const Wrapper = styled.section`
         background-color: black;
         padding: 80px;
         width: 90%;
+        border-radius: 20px;
     }
     .joincomm p{
         color: #F7F7F7;
@@ -114,8 +115,11 @@ const Wrapper = styled.section`
         border-radius: 10px;
     }
     @media screen and (max-width: 950px) {
-        .side{
-            display: none;
+        .link-sub h1{
+            font-size: 15px;
+        }
+        .joincomm{
+            padding: 30px;
         }
     }
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SideNarbar from '../Asidebar/SideNavBar'
+import SideNavbar from '../Asidebar/SideNavBar'
 import {AiOutlineCloudUpload} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ const GovtInner = () => {
   return(
     <Wrapper>
       <div>
-        <SideNarbar/>
+        <SideNavbar/>
       </div>
       <div className='nin'>
         <div className='card'>
