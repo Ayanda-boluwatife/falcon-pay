@@ -179,7 +179,7 @@ align-items: center;
     align-items: center;
 }
 .inter h1{
-    font-size: 20px;
+    font-size: 30px;
 }
 .blues{
     background-color: #FBFBFB;
