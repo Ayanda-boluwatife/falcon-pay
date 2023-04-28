@@ -14,10 +14,10 @@ function Help() {
    <div className="twoo">
         <div className='txt'>
             <div className='inp'>
-                <input type="text" name="" id="" placeholder='your name'/>
-                <input type="email" name="" id="" placeholder='your email'/>
+                <input type="text" name="" id="" placeholder='Your name'/>
+                <input type="email" name="" id="" placeholder='Your email'/>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder='message'></textarea> 
+            <textarea name="" id="" cols="30" rows="10" placeholder='Message'></textarea> 
         </div>
         <button id='Send'>Send Us Message</button>
     </div>

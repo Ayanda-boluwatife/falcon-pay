@@ -16,36 +16,40 @@ return(
                         <p>Streamline your financials - The ultimate platform for freelancers and salaried workers. Effortlessly manage your international payments. </p>
                     </ul>
                 </div>
-                <div className="first1">
-                    <h3>products</h3>
-                    <ul>
-                        <li>Savings</li>
-                        <li>Send</li>
-                        <li>Receive</li>
-                        <li>Domain Account</li>
-                    </ul>
+                <div className="links">
+                    <div className="inner-link">
+                        <div className="first1">
+                            <h3>products</h3>
+                            <ul>
+                                <li>Savings</li>
+                                <li>Send</li>
+                                <li>Receive</li>
+                                <li>Domain Account</li>
+                            </ul>
+                        </div>
+                        <div className="first2">
+                            <h3>About</h3>
+                            <ul>
+                                <li>About Us</li>
+                                <li>Contact</li>
+                                <li>Team</li>
+                                <li>Partner</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="first3">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li>Document</li>
+                            <li>Blog</li>
+                            <li>Career</li>
+                            <li>FAQ</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy & Policy</li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="first2">
-                    <h3>About</h3>
-                    <ul>
-                        <li>About Us</li>
-                        <li>Contact</li>
-                        <li>Team</li>
-                        <li>Partner</li>
-                    </ul>
-                </div>
-                <div className="first3">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li>Document</li>
-                        <li>Blog</li>
-                        <li>Career</li>
-                        <li>FAQ</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy & Policy</li>
-                    </ul>
-                </div>
-                </div>
+            </div>
             <div className="foot">
             <p></p>
         </div>
@@ -160,7 +164,7 @@ const Wrapper = styled.article `
         /* margin-top: 50px; */
     }
     .bords{
-        /* margin-top: 50px; */
+        margin-top: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -176,7 +180,20 @@ const Wrapper = styled.article `
         flex-direction: column;
       
     }    
-       
+    .inner-link{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        justify-content: center;
+        gap: 20px;
+        /* background-color: red; */
+        width: 100%;
+    }
     .first{
         width: 100%;
     }
@@ -192,6 +209,7 @@ const Wrapper = styled.article `
     }
     .first3{
         width: 100%;
+        padding-left: 100px;
     }
     .all-first button{
         margin-top: 30px;
@@ -200,7 +218,7 @@ const Wrapper = styled.article `
         margin-top: 50px;
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        gap: 20px;
         width: 100%;
     }
     .border{

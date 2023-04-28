@@ -115,6 +115,9 @@ p {
         width: 427px;
         height: 647px;
     }
+    article{
+        margin-top: 20px;
+    }
 }
 `
 
