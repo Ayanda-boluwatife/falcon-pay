@@ -12,12 +12,13 @@ function Help() {
     <p>If you have any questions or need assistance with our platform, please don't hesitate to contact us. You can reach us through our customer support team, by email, phone or live chat.</p>
    </div>
    <div className="twoo">
-        <div className="twooo">
-        <input type="text" placeholder='Your Name' />
-        <input type="email" placeholder='Your Email' required />
+        <div className='txt'>
+            <div className='inp'>
+                <input type="text" name="" id="" placeholder='your name'/>
+                <input type="email" name="" id="" placeholder='your email'/>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder='message'></textarea> 
         </div>
-        
-        <textarea name="" id="" cols="50" rows="10" placeholder='Message'></textarea>
         <button id='Send'>Send Us Message</button>
     </div>
       
@@ -32,6 +33,14 @@ function Help() {
     }
     .two{
         width: 100%;
+    }
+    .inp{
+        display: flex;
+        gap: 10px;
+    }
+    .txt{
+        display: flex;
+        flex-direction: column;
     }
     .two p{
         width: 70%;
@@ -50,7 +59,7 @@ function Help() {
     }
     .twoo input{
         background-color: #F7F7F7;
-        padding: 1px 40px;
+        padding: 20px;
         height  :5vh ;
         border: none;
         border-radius: 10px;
@@ -130,6 +139,10 @@ function Help() {
         display: flex;
         gap: 20px;
         flex-direction: column;
+    }
+    .inp{
+        flex-direction: column;
+        padding-top: 20px;
     }
     }
  `

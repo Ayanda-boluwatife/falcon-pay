@@ -17,32 +17,32 @@ return(
                     </ul>
                 </div>
                 <div className="first1">
-                    <ul>
                     <h3>products</h3>
-                    <li>Savings</li>
-                    <li>Send</li>
-                    <li>Receive</li>
-                    <li>Domain Account</li>
+                    <ul>
+                        <li>Savings</li>
+                        <li>Send</li>
+                        <li>Receive</li>
+                        <li>Domain Account</li>
                     </ul>
                 </div>
                 <div className="first2">
-                    <ul>
                     <h3>About</h3>
-                    <li>About Us</li>
-                    <li>Contact</li>
-                    <li>Team</li>
-                    <li>Partner</li>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact</li>
+                        <li>Team</li>
+                        <li>Partner</li>
                     </ul>
                 </div>
                 <div className="first3">
-                    <ul>
                     <h3>Resources</h3>
-                    <li>Document</li>
-                    <li>Blog</li>
-                    <li>Career</li>
-                    <li>FAQ</li>
-                    <li>Terms & Conditions</li>
-                    <li>Privacy & Policy</li>
+                    <ul>
+                        <li>Document</li>
+                        <li>Blog</li>
+                        <li>Career</li>
+                        <li>FAQ</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy & Policy</li>
                     </ul>
                 </div>
                 </div>
@@ -53,13 +53,14 @@ return(
         
 
         <div className="border">
-        <div className="bord"><h3>2023 copyright by FalconPay | All rights reserved.</h3></div>
+        <div className="bord">
+            <h3>2023 copyright by FalconPay | All rights reserved.</h3>
+        </div>
         <div className="bords">
-        <img src={process.env.PUBLIC_URL + '/Mubarak img/instagram.png'} alt="main"  />
-        <img src={process.env.PUBLIC_URL + '/Mubarak img/twitter.png'} alt="main"  />
-        <img src={process.env.PUBLIC_URL + '/Mubarak img/linkedin.png'} alt="main"  />
-        <img src={process.env.PUBLIC_URL + '/Mubarak img/facebook.png'} alt="main"  />
-            
+            <img src={process.env.PUBLIC_URL + '/Mubarak img/instagram.png'} alt="main"  />
+            <img src={process.env.PUBLIC_URL + '/Mubarak img/twitter.png'} alt="main"  />
+            <img src={process.env.PUBLIC_URL + '/Mubarak img/linkedin.png'} alt="main"  />
+            <img src={process.env.PUBLIC_URL + '/Mubarak img/facebook.png'} alt="main"  />
         </div>
         </div>
 
@@ -72,7 +73,10 @@ return(
 
 }
 const Wrapper = styled.article `
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .one{
         background-color: black;
@@ -84,15 +88,18 @@ const Wrapper = styled.article `
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 30px;
+        gap: 30px;
     }
     .all-first{
         display: flex;
         align-items: center;
         flex-direction: row;
+        gap: 30px;
       
     }
     .all-first li{
-        line-height: 2.7rem;
+        line-height: 1.7rem;
         cursor: pointer;
         display: flex;
     }
@@ -100,7 +107,7 @@ const Wrapper = styled.article `
         color: #7ED07E;
     }
     .all-first p{
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
         line-height: 2.2rem;
     }
     .all-first h3{
@@ -154,7 +161,9 @@ const Wrapper = styled.article `
         /* margin-top: 50px; */
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
     overflow: hidden;
     @media screen and (max-width:768px) {
@@ -189,7 +198,7 @@ const Wrapper = styled.article `
         margin-top: 50px;
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 40px;
         width: 100%;
     }
     .border{

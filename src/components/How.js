@@ -7,8 +7,10 @@ function How() {
       <div className="how">
         <h1>How Do You Get Started?</h1>
         <div className="step">
-          <div className="step-number">
-            <h3>1</h3>
+          <div>
+            <div className="step-number">
+              <h3>1</h3>
+            </div>
           </div>
           <div className="step-content">
             <h2>Register As A User</h2>
@@ -16,8 +18,10 @@ function How() {
           </div>
         </div>
         <div className="step">
-          <div className="step-number">
-            <h3>2</h3>
+          <div>
+            <div className="step-number">
+              <h3>2</h3>
+            </div>
           </div>
           <div className="step-content">
             <h2>Complete Your KYC Verification</h2>
@@ -25,8 +29,10 @@ function How() {
           </div>
         </div>
         <div className="step">
-          <div className="step-number">
-            <h3>3</h3>
+          <div>
+            <div className="step-number">
+              <h3>3</h3>
+            </div>
           </div>
           <div className="step-content">
             <h2>Generate Bank Accounts</h2>
@@ -34,8 +40,10 @@ function How() {
           </div>
         </div>
         <div className="step">
-          <div className="step-number">
-            <h3>4</h3>
+          <div>
+            <div className="step-number">
+              <h3>4</h3>
+            </div>
           </div>
           <div className="step-content">
             <h2>Get Paid To Your Local Bank Accounts</h2>

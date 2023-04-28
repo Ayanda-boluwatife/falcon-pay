@@ -7,11 +7,13 @@ function Integration(){
      <Wrapper className="page-center">
      <div className="one">
         <div className="two">
-            <h1 className="integrate">Integration With Popular Payment Gateways</h1>
-            <p>Our platform features seamless integration with popular payment gateways, allowing freelancers to easily receive payments for their services.</p>
+           <div> 
+                <h1 className="integrate">Integration With Popular Payment Gateways</h1>
+                <p>Our platform features seamless integration with popular payment gateways, allowing freelancers to easily receive payments for their services.</p>
+            </div>
             <div className="main">
                 <div className="first">
-                <img src={process.env.PUBLIC_URL + '/Mubarak img/main.png'} alt="main"  />
+                    <img src={process.env.PUBLIC_URL + '/Mubarak img/main.png'} alt="main"  />
                 </div>
                 <div className="second">
                 <h2>Good Rate</h2>
@@ -20,7 +22,7 @@ function Integration(){
             </div>
             <div className="main">
                 <div className="first">
-                <img src={process.env.PUBLIC_URL + '/Mubarak img/save.png'} alt="main"  />
+                    <img src={process.env.PUBLIC_URL + '/Mubarak img/save.png'} alt="main"  />
                 </div>
                 <div className="seconds">
                 <h2>Competitive Transaction Fee</h2>

@@ -24,7 +24,7 @@ const Wrapper = styled.article`
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }    
 .one h2{
     color: #90EE90;
@@ -49,6 +49,11 @@ button:hover{
     margin-top: 20px;
     text-align: center;
     line-height: 1.5rem;
+}
+@media screen and (max-width:950px) {
+  .one p{
+    width: 80%;
+  }
 }
 `
 
