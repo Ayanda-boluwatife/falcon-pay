@@ -94,6 +94,7 @@ const Wrapper = styled.article `
     .all-first{
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: row;
         gap: 30px;
       
@@ -120,6 +121,7 @@ const Wrapper = styled.article `
      cursor: pointer;
      font-size: 20px;
      display: flex;
+     align-items: center;
      justify-content: center;
      flex-direction: row;
      height: 50px;

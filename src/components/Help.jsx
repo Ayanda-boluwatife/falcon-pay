@@ -119,7 +119,7 @@ function Help() {
     @media screen and (max-width:768px) {
         .three{
         display: flex;
-        margin-top: 100px;
+        margin-top: 30px;
         flex-direction: column;
     }
     .two p{

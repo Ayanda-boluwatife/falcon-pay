@@ -7,7 +7,7 @@ function Integration(){
      <Wrapper className="page-center">
      <div className="one">
         <div className="two">
-           <div> 
+           <div className="inter"> 
                 <h1 className="integrate">Integration With Popular Payment Gateways</h1>
                 <p>Our platform features seamless integration with popular payment gateways, allowing freelancers to easily receive payments for their services.</p>
             </div>
@@ -150,7 +150,7 @@ align-items: center;
 display: flex;
 flex-direction: column;
 width: 100%;
-margin-top: 100px;
+margin-top: 30px;
 /* height: 50vh; */
 }
 .bluess{
@@ -169,6 +169,12 @@ align-items: center;
     align-items: center;
     height: 25vh;
 }
+.two p{
+    margin-top: 10px;
+}
+.inter h1{
+    font-size: 15px;
+}
 .blues{
     background-color: #FBFBFB;
     width: 100%; 
@@ -179,7 +185,7 @@ align-items: center;
 }
 
 .integrate{
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .red{
