@@ -209,7 +209,7 @@ const Wrapper = styled.article `
     }
     .first3{
         width: 100%;
-        padding-left: 80px;
+        padding-left: 60px;
     }
     .all-first button{
         margin-top: 30px;
