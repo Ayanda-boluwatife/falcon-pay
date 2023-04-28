@@ -17,9 +17,11 @@ function Help() {
                 <input type="text" name="" id="" placeholder='Your name'/>
                 <input type="email" name="" id="" placeholder='Your email'/>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder='Message'></textarea> 
+            <textarea name="" id="" cols="30" rows="10" placeholder='Write Your Message...'></textarea> 
         </div>
-        <button id='Send'>Send Us Message</button>
+        <div className='send'>
+            <button id='Send'>Send Your Message</button>
+        </div>
     </div>
       
    </div>
@@ -127,19 +129,25 @@ function Help() {
     }
     .two p{
         width: 100%;
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 2rem;
     }
     .twooo{
         width: 100%;
         display: flex;
-        gap: 20px;
+        gap: 10px;
         margin-top: 50px;
         flex-direction: row;
     }
     .twoo{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .send{
+        display: flex;
+        justify-content: center;
     }
     .twooo{
         width: 100%;
