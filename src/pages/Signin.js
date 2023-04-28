@@ -170,6 +170,7 @@ a{
     .password-input svg{
         top: 42%;
     }
+    
 }
 `
 

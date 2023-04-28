@@ -163,6 +163,14 @@ const Wrapper = styled.article `
     .bord{
         /* margin-top: 50px; */
     }
+    .links{
+        display: flex;
+        gap: 40px;
+    }
+    .inner-link{
+        display: flex;
+        gap: 140px;
+    }
     .bords{
         margin-top: 50px;
         display: flex;
