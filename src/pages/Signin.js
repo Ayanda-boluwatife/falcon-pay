@@ -43,18 +43,20 @@ const Signin = () => {
                         </Link>
                     </div>
                     <h1>Log in</h1>
-                    <div className='mail-input form-field'>
-                        <input type='text' placeholder='Enter your mail' />
-                    </div>
-                    <div className='password-input form-field'>
-                        <input type={showPassword ? "text" : "password"} onChange={handlePasswordChange} value={password} placeholder='Your Password' />
-                        {
-                            showPassword?<span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
-                        }
-                    </div>
-                    <div className='login-btn'>
-                        <Link to={"/dashboard"}><button>Continue</button></Link>
-                    </div>
+                    <form>
+                        <div className='mail-input form-field'>
+                            <input type='text' placeholder='Enter your mail' />
+                        </div>
+                        <div className='password-input form-field'>
+                            <input type={showPassword ? "text" : "password"} onChange={handlePasswordChange} value={password} placeholder='Your Password' />
+                            {
+                                showPassword?<span onClick={toggleShowPassword}><AiOutlineEye /></span>  : <span onClick={toggleShowPassword}><BiHide /></span>
+                            }
+                        </div>
+                        <div className='login-btn'>
+                            <Link to={"/dashboard"}><button>Continue</button></Link>
+                        </div>
+                    </form>
                     <p>Or Log in with</p>
                     <div className='login-with'>
                         <a href='.'>
@@ -169,6 +171,11 @@ a{
     
     .password-input svg{
         top: 42%;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
     
 }
