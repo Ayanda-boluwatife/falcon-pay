@@ -35,6 +35,7 @@ margin-top: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
+    gap: 30px;
 }
 .action-btn {
     width: 200px;
@@ -84,7 +85,7 @@ p {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        column-gap: 2.5rem;
+        column-gap: 5rem;
     }
     p {
         font-size: 20px;
@@ -92,6 +93,7 @@ p {
     }
     .hero-box {
         margin: 0;
+        padding: 20px;
     }
     .platforms-container {
         padding-top: 5rem;
@@ -104,7 +106,8 @@ p {
     margin-top: 6rem;
     .content {
         align-items: center;
-        column-gap: 5rem;
+        column-gap: 10rem;
+        margin-top: 8rem;
     }
     .hero-box {
         width: 582px;

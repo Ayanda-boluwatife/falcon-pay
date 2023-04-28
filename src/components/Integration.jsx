@@ -172,8 +172,14 @@ align-items: center;
 .two p{
     margin-top: 10px;
 }
+.inter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .inter h1{
-    font-size: 15px;
+    font-size: 18px;
 }
 .blues{
     background-color: #FBFBFB;
@@ -185,7 +191,7 @@ align-items: center;
 }
 
 .integrate{
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .red{
