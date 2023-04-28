@@ -56,6 +56,9 @@ function Help() {
     #Send{
         color: #75C175;
         background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .twoo input{
         background-color: #F7F7F7;
@@ -133,6 +136,10 @@ function Help() {
         gap: 20px;
         margin-top: 50px;
         flex-direction: row;
+    }
+    .twoo{
+        display: flex;
+        flex-direction: column;
     }
     .twooo{
         width: 100%;
