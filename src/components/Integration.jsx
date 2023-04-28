@@ -7,7 +7,7 @@ function Integration(){
      <Wrapper className="page-center">
      <div className="one">
         <div className="two">
-            <h1>Integration With Popular Payment Gateways</h1>
+            <h1 className="integrate">Integration With Popular Payment Gateways</h1>
             <p>Our platform features seamless integration with popular payment gateways, allowing freelancers to easily receive payments for their services.</p>
             <div className="main">
                 <div className="first">
@@ -174,6 +174,10 @@ align-items: center;
     justify-content: center;
     align-items: center;
     height: 25vh;
+}
+
+.integrate{
+    font-size: 15px;
 }
 
 .red{

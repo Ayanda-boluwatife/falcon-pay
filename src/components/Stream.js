@@ -24,6 +24,7 @@ const Wrapper = styled.article`
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }    
 .one h2{
     color: #90EE90;
