@@ -10,7 +10,6 @@ function Help() {
    <div className="two">
     <h1>Contact Us</h1>
     <p>If you have any questions or need assistance with our platform, please don't hesitate to contact us. You can reach us through our customer support team, by email, phone or live chat.</p>
-    <button>Frequently Asked Questions</button>
    </div>
    <div className="twoo">
         <div className="twooo">

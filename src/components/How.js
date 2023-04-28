@@ -64,9 +64,8 @@ const Wrapper = styled.article`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 2rem;
-    border-radius: 50%;
+    padding: 10px;
+    border-radius: 10px;
     background-color: #000000;
     color: #90EE90;
   }
@@ -106,9 +105,8 @@ const Wrapper = styled.article`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 12rem;
-    height: 3rem;
-    border-radius: 50%;
+    padding:10px;
+    border-radius: 10px;
     background-color: #000000;
     color: #90EE90;
   }
@@ -116,9 +114,7 @@ const Wrapper = styled.article`
   width: 100%;
   margin-top: 1rem;
   }
-  .step{
-    flex-direction: column;
-  }
+  
 }
 `
 
